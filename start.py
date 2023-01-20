@@ -1,11 +1,12 @@
-a = input("Welcome to the Band Name Generator.\nWhat's the name of the city you grew up in?\n")
-b = input("What's your pet's name?\n")
-print("Your band name could be " + a + ' ' + b)
+# 🚨 Don't change the code below 👇
+two_digit_number = input("Type a two digit number: ")
+# 🚨 Don't change the code above 👆
 
+####################################
+#Write your code below this line 👇
+#a = int(two_digit_number)
 
-# Welcome to the Band Name Generator.
-# What's the name of the city you grew up in?
-# dfg
-# What's your pet's name?
-# wertwer
-# Your band name could be df df
+first_number = two_digit_number[0]
+second_number = two_digit_number[1]
+
+print(int(first_number)+int(second_number))

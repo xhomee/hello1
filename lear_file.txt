@@ -11,6 +11,29 @@ b = c
 
 
 
+2 day 19.01.23
+
+data types, numbers, operations, type conversion, f-string
+
+string - строки  в ""
+subscript - метод витягування символів з строки []
+integer - всі числа без десятичних символів .Там можна записувати великі числа так 123_345_534
+float - число з плаваючою точкою
+boolean - True or False
+
+type() - побачити тип функції
+міняти тип данних функції
+str()
+int()
+float()
+
+
+
+
+
+
+
+
 
 
 

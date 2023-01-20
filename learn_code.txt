@@ -15,3 +15,32 @@ a = input("Welcome to the Band Name Generator.\nWhat's the name of the city you 
 b = input("What's your pet's name?\n")
 print("Your band name could be " + a + ' ' + b)
 
+
+2 lesson 19.01.23
+
+print("hello"[1])
+: e
+
+num_char = len(input("What is your name? \n"))
+new_num_char = str(num_char)
+print("Your name has " + new_num_char + " characters.")
+
+print(type(new_num_char))
+
+print(70+ float("123.3"))
+:193.3
+
+# 🚨 Don't change the code below 👇
+two_digit_number = input("Type a two digit number: ")
+# 🚨 Don't change the code above 👆
+
+####################################
+#Write your code below this line 👇
+a = str(two_digit_number)
+
+first_number = a[0]
+second_number = a[1]
+
+print(int(first_number)+int(second_number))
+
+
