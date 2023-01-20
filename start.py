@@ -1,12 +1,9 @@
-# 🚨 Don't change the code below 👇
-two_digit_number = input("Type a two digit number: ")
-# 🚨 Don't change the code above 👆
+print("Welcome to the tip calculator!")
+bill = float(input("What was the total bill? "))
+tip = float(input("How much tip would you like to give? 10, 12, or 15? "))
+people = int(input("How many people to split the bill? "))
 
-####################################
-#Write your code below this line 👇
-#a = int(two_digit_number)
+sum_all = round((bill + (bill/100*tip)) / people,2)
 
-first_number = two_digit_number[0]
-second_number = two_digit_number[1]
-
-print(int(first_number)+int(second_number))
+print(f"Each person should pay: ${sum_all}")
+ 
