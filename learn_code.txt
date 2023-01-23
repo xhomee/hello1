@@ -2,14 +2,18 @@
 
 print("Hello " +input("Write u name? ") + "!")
 
+
 print(len(input("What is your name? ")))
+
 
 name = input ("What is your name? ")
 print(name)
 
+
 name = input ("What is your name? ")
 lenght = len(name)
 print(lenght)
+
 
 a = input("Welcome to the Band Name Generator.\nWhat's the name of the city you grew up in?\n")
 b = input("What's your pet's name?\n")
@@ -31,6 +35,8 @@ print(type(new_num_char))
 print(70+ float("123.3"))
 :193.3
 
+
+
 # 🚨 Don't change the code below 👇
 two_digit_number = input("Type a two digit number: ")
 # 🚨 Don't change the code above 👆
@@ -43,7 +49,6 @@ first_number = a[0]
 second_number = a[1]
 
 print(int(first_number)+int(second_number))
-
 
 
 
@@ -60,6 +65,7 @@ bmi = int(weight_flo/(height_flo*height_flo))
 print(bmi)
 
 
+
 a= 10
 b = 5.1
 print(a/b)
@@ -68,11 +74,13 @@ print(round(a/b,2))
 1.96
 
 
+
 score = 0
 height = 1.78
 isWinning = True
 print(f"your score is {score} {height} {isWinning}" )
 : your score is 0 1.78 True
+
 
 
 # 🚨 Don't change the code below 👇
@@ -91,6 +99,7 @@ print(f"You have {days} days, {weeks} weeks, and {months} months left.")
 # 1 year = 365 days 52 weeks 12 months
 
 
+
 print("Welcome to the tip calculator!")
 bill = float(input("What was the total bill? "))
 tip = float(input("How much tip would you like to give? 10, 12, or 15? "))
@@ -102,5 +111,81 @@ print(f"Each person should pay: ${sum_all}")
 
 
 
+=======
+3 lesson 23.01.23
 
+
+print("Welcome to the rollercoaster!")
+height = int(input("What is your height in cm ? "))
+
+if height >= 120:
+    print("Your a welcome!")
+else:
+    print("Your need to grou up)")
+
+
+
+# 🚨 Don't change the code below 👇
+number = int(input("Which number do you want to check? "))
+# 🚨 Don't change the code above 👆
+
+#Write your code below this line 👇
+
+if number % 2 == 0:
+    print("This is an even number.")
+else:
+    print("This is an odd number.")
+
+
+
+print("Welcome to the rollercoaster!")
+height = int(input("What is your height in cm ? "))
+
+if height >= 120:
+    print("Your a welcome!")
+    age = int(input("What is your age? "))
+    if age >= 18:
+        print("Your ticket coasts 12$")
+    else:
+        print("Tour ticket costs 7$")
+else:
+    print("Your need to grou up)")
+
+
+
+# 🚨 Don't change the code below 👇
+height = float(input("enter your height in m: "))
+weight = float(input("enter your weight in kg: "))
+# 🚨 Don't change the code above 👆
+
+#Write your code below this line 👇
+bmi = round(weight/height**2)
+
+if bmi < 18.5:
+    print(f"Your BMI is {bmi}, you are underweight.")
+elif bmi >18.5 and bmi < 25:
+    print(f"Your BMI is {bmi}, you have a normal weight.")
+elif bmi >25 and bmi < 30:
+    print(f"Your BMI is {bmi}, you are slightly overweight.")
+elif bmi > 30 and bmi < 35:
+    print(f"Your BMI is {bmi}, you are obese.")
+else:
+    print(f"Your BMI is {bmi}, you are clinically obese.")
+
+
+
+# 🚨 Don't change the code below 👇
+year = int(input("Which year do you want to check? "))
+# 🚨 Don't change the code above 👆
+
+#Write your code below this line 👇
+
+if year % 4 == 0:
+    if year % 100 != 0:
+        if year % 400 !=0:
+            print("Leap year.")
+    else:
+        print("Not leap year.")
+else:
+    print("Not leap year.")
 
