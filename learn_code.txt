@@ -305,3 +305,40 @@ if extra_cheese == "Y" or extra_cheese == "y":
 
 print(f"Your final bill is: ${price}.")
 
+
+
+# 🚨 Don't change the code below 👇
+print("Welcome to the Love Calculator!")
+name1 = input("What is your name? \n")
+name2 = input("What is their name? \n")
+
+# 🚨 Don't change the code above 👆
+
+#Write your code below this line 👇
+oll = name1 + name2
+
+t = oll.lower().count("t")
+r = oll.lower().count("r")
+u = oll.lower().count("u")
+e = oll.lower().count("e")
+
+l = oll.lower().count("l")
+o = oll.lower().count("o")
+v = oll.lower().count("v")
+e2 = oll.lower().count("e")
+
+first_numbers = t+r+u+e
+second_numbers = l+o+v+e
+
+make_string = str(first_numbers)+str(second_numbers)
+make_integer = int(make_string)
+
+if make_integer >=40 and make_integer <= 50:
+    print(f"Your score is {make_integer}, you are alright together.")
+elif make_integer < 10 or make_integer > 90:
+    print(f"Your score is {make_integer}, you go together like coke and mentos.")
+else:
+    print(f"Your score is {make_integer}.")
+
+
+
