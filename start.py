@@ -1,15 +1,23 @@
-print("Welcome to the rollercoaster!")
-height = int(input("What is your height in cm ? "))
+#Рік вважається високосним, якщо він ділиться на 4. Винятком є роки, які кратні 100 (такі роки є високосними тільки тоді, якщо вони ще діляться на 400).
 
-if height >= 120:
-    print("Your a welcome!")
-    age = int(input("What is your age? "))
-    if age < 12:
-        print("Your ticket coasts 5$")
-    elif age <= 18:
-        print("Your ticket coasts 7$")
+year = 2018
+
+if year % 4 == 0:
+    if year % 100 == 0:
+        if year % 400 ==0:
+            print("Leap year.")
+        else:
+            print("Not leap year.")
     else:
-        print("Tour ticket costs 12$")
-
+        print("Leap year.")
 else:
-    print("Your need to grou up)")
+    print("Not leap year.")
+
+
+
+
+
+# if year % 4 == 0 and year % 100 == 0 and year % 400 == 0 or year % 4 == 0 and year % 100 != 0 and year % 400 != 0:
+#     print("Leap year.")
+# else:
+#     print("Not leap year.")
