@@ -77,8 +77,7 @@ else:
     do this
 
 
-if/elif/else
-
+if/elif/else    тільки одне рішення
 if condotion1:
     do A
 elif condition2:
@@ -87,3 +86,24 @@ else:
     do this
 
 
+multiple if     може бути багато рішень
+if condition1:
+    do A
+if condition2:
+    do B
+if condition3:
+    do C
+
+
+if condition1 & condition 2 & condition3:
+    do this
+else:
+    do this
+
+logical operators
+A and B      повинні обоє бути true щоб виконався рядот
+C or D       один повинен бути тру
+not E        якщо умова True то замінить її на false
+
+.lover() = переновить всі символи в нижній регістр
+.count() = підраховує скільки разів символ повторюється

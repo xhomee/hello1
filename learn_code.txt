@@ -210,3 +210,98 @@ if year % 4 == 0 and year % 100 == 0 and year % 400 == 0 or year % 4 == 0 and ye
     print("Leap year.")
 else:
     print("Not leap year.")
+
+
+
+
+print("Welcome to the rollercoaster!")
+height = int(input("What is your height in cm ? "))
+bill = 0
+
+if height >= 120:
+    print("Your a welcome!")
+    age = int(input("What is your age? "))
+    if age < 12:
+        bill = 5
+        print("Child ticket coasts 5$")
+    elif age <= 18:
+        bill = 7
+        print("Youth ticket coasts 7$")
+    else:
+        bill = 12
+        print("Adult ticket costs 12$")
+
+    wants_photo = input("Do you want a photo taken? Y or N ")
+    if wants_photo == "Y" or wants_photo == "y":
+        bill += 3
+
+    print(f"Your final bill is {bill}")
+
+else:
+    print("Your need to grou up)")
+
+
+
+# 🚨 Don't change the code below 👇
+print("Welcome to Python Pizza Deliveries!")
+size = input("What size pizza do you want? S, M, or L ")
+add_pepperoni = input("Do you want pepperoni? Y or N ")
+extra_cheese = input("Do you want extra cheese? Y or N ")
+# 🚨 Don't change the code above 👆
+
+#Write your code below this line 👇
+price = 0
+
+#what size pizza u want
+if size == "S" or size == "s":
+    price += 15
+    if add_pepperoni == "Y" or add_pepperoni == "y":
+        price +=2
+    if extra_cheese == "Y" or extra_cheese == "y":
+        price +=1
+if size == "M" or size == "m":
+    price += 20
+    if add_pepperoni == "Y" or add_pepperoni == "y":
+        price +=3
+    if extra_cheese == "Y" or extra_cheese == "y":
+        price +=1
+if size == "L" or size == "l":
+    price += 25
+    if add_pepperoni == "Y" or add_pepperoni == "y":
+        price +=3
+    if extra_cheese == "Y" or extra_cheese == "y":
+        price +=1
+
+print(f"Your final bill is: ${price}.")
+
+
+
+# 🚨 Don't change the code below 👇
+print("Welcome to Python Pizza Deliveries!")
+size = input("What size pizza do you want? S, M, or L ")
+add_pepperoni = input("Do you want pepperoni? Y or N ")
+extra_cheese = input("Do you want extra cheese? Y or N ")
+# 🚨 Don't change the code above 👆
+
+price = 0
+
+if size == "S" or size == "s":
+    price += 15
+elif size == "M" or size == "m":
+    price += 20
+elif size == "L" or size == "l":
+    price += 25
+else:
+    print("Wrong action")
+
+if add_pepperoni == "Y" or add_pepperoni == "y":
+    if size == "S" or size == "s":
+        price += 2
+    elif size == "M" or size == "m" or size == "L" or size == "l":
+        price += 3
+
+if extra_cheese == "Y" or extra_cheese == "y":
+    price += 1
+
+print(f"Your final bill is: ${price}.")
+

@@ -1,23 +1,25 @@
-#Рік вважається високосним, якщо він ділиться на 4. Винятком є роки, які кратні 100 (такі роки є високосними тільки тоді, якщо вони ще діляться на 400).
+print("Welcome to the rollercoaster!")
+height = int(input("What is your height in cm ? "))
+bill = 0
 
-year = 2018
-
-if year % 4 == 0:
-    if year % 100 == 0:
-        if year % 400 ==0:
-            print("Leap year.")
-        else:
-            print("Not leap year.")
+if height >= 120:
+    print("Your a welcome!")
+    age = int(input("What is your age? "))
+    if age < 12:
+        bill = 5
+        print("Child ticket coasts 5$")
+    elif age <= 18:
+        bill = 7
+        print("Youth ticket coasts 7$")
+    elif age >= 45 and age <= 55:
+        bill = 0
+        print("Youth ticket coasts 0$")
     else:
-        print("Leap year.")
-else:
-    print("Not leap year.")
+        bill = 12
+        print("Adult ticket costs 12$")
 
+    wants_photo = input("Do you want a photo taken? Y or N ")
+    if wants_photo == "Y" or wants_photo == "y":
+        bill += 3
 
-
-
-
-# if year % 4 == 0 and year % 100 == 0 and year % 400 == 0 or year % 4 == 0 and year % 100 != 0 and year % 400 != 0:
-#     print("Leap year.")
-# else:
-#     print("Not leap year.")
+    print(f"Your final bill is {bill}")
