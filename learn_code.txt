@@ -395,3 +395,160 @@ else:
 
 
 
+4 day
+
+import pi_module
+print(pi_module.pi)
+
+
+
+import random
+
+random_integer = random.randint(1,10)
+print(random_integer)
+print(" ")
+
+random_float = random.random()
+print(random_float)
+print(random_float*5)
+
+print(" ")
+random_float2 = random.uniform(0,5)
+print(random_float2)
+
+
+
+import random
+
+number_random = random.randint(0,1)
+if number_random == 1:
+    print("Heads")
+else:
+    print("Tails")
+
+
+
+states_of_america = [ "Delaware", "Pennsylvania" ]
+print(states_of_america[0])
+: Delaware
+
+states_of_america = [ "Delaware", "Pennsylvania" ]
+print(states_of_america[0])
+
+states_of_america[0] = 'Hello'
+print(states_of_america)
+:Delaware
+:['Hello', 'Pennsylvania']
+
+states_of_america.append("ff")
+print(states_of_america)
+:['Hello', 'Pennsylvania', 'ff']
+
+states_of_america.extend(["hi","hello"])
+print(states_of_america)
+:['Hello', 'Pennsylvania', 'ff', 'hi', 'hello']
+
+
+
+import random
+# Import the random module here
+
+# Split string method
+#names_string = input("Give me everybody's names, separated by a comma. ")
+names_string = "Angela, Ben, Jenny, Michael, Chloe"
+names = names_string.split(", ")
+# 🚨 Don't change the code above 👆
+
+#Write your code below this line 👇
+
+people_len = len(names)
+people_pay = random.randint(0,people_len-1)
+pays = names[people_pay]
+print(f"{pays} is going to buy the meal today!")
+
+or use .choice
+x = random.choice(names)
+print(x)
+
+
+
+fruits = ["Strawberries","Nectarines","Apples","Grapes","Peaches","Cherries","Pears"]
+vegetables =["Spinach","Kale","Tomatoes","Celery", "Potatoes"]
+dirty_dozen2 = [fruits, vegetables]
+print(dirty_dozen2)
+: [['Strawberries', 'Nectarines', 'Apples', 'Grapes', 'Peaches', 'Cherries', 'Pears'], ['Spinach', 'Kale', 'Tomatoes', 'Celery', 'Potatoes']]
+
+print(dirty_dozen2[0][0])
+: Strawberries
+
+
+
+# 🚨 Don't change the code below 👇
+row1 = ["⬜️","️⬜️","️⬜️"]
+row2 = ["⬜️","⬜️","️⬜️"]
+row3 = ["⬜️️","⬜️️","⬜️️"]
+map = [row1, row2, row3]
+print(f"{row1}\n{row2}\n{row3}")
+position = input("Where do you want to put the treasure? ")
+# 🚨 Don't change the code above 👆
+
+#Write your code below this row 👇
+x_variable = int(position[0])
+y_variable = int(position[1])
+
+if x_variable == 1:
+    if y_variable == 1:
+        row1.insert(x_variable, "X")
+        row1.pop(x_variable - 1)
+    elif y_variable == 2:
+        row2.insert(x_variable, "X")
+        row2.pop(x_variable - 1)
+    elif y_variable == 3:
+        row3.insert(x_variable, "X")
+        row3.pop(x_variable - 1)
+elif x_variable == 2:
+    if y_variable == 1:
+        row1.insert(x_variable, "X")
+        row1.pop(x_variable - 1)
+    elif y_variable == 2:
+        row2.insert(x_variable, "X")
+        row2.pop(x_variable - 1)
+    elif y_variable == 3:
+        row3.insert(x_variable, "X")
+        row3.pop(x_variable - 1)
+elif x_variable ==  3:
+    if y_variable == 1:
+        row1.insert(x_variable, "X")
+        row1.pop(x_variable - 1)
+    elif y_variable == 2:
+        row2.insert(x_variable, "X")
+        row2.pop(x_variable - 1)
+    elif y_variable == 3:
+        row3.insert(x_variable, "X")
+        row3.pop(x_variable - 1)
+
+# 🚨 Don't change the code below 👇
+print(f"{row1}\n{row2}\n{row3}")
+
+or u can use
+::::::::::  x = map[y_variable-1][x_variable-1] ="x"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
