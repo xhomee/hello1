@@ -1,104 +1,83 @@
+#Password Generator Project
 import random
-rock = '''
-    _______
----'   ____)
-      (_____)
-      (_____)
-      (____)
----.__(___)
-'''
+letters = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z', 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z']
+symbols = ['!', '#', '$', '%', '&', '(', ')', '*', '+']
+numbers = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9']
 
-paper = '''
-    _______
----'   ____)____
-          ______)
-          _______)
-         _______)
----.__________)
-'''
+print("Welcome to the PyPassword Generator!")
+# nr_letters = int(input("How many letters would you like in your password?\n"))
+# nr_symbols = int(input(f"How many symbols would you like?\n"))
+# nr_numbers = int(input(f"How many numbers would you like?\n"))
 
-scissors = '''
-    _______
----'   ____)____
-          ______)
-       __________)
-      (____)
----.__(___)
-'''
-user_choose = input("Welcome to the game. Choose rock - 0 paper - 1 scissors -2 ")
-#user_choose = "1"
-# rock_var = 0
-# paper_var = 1
-# scissors_var = 2
-typess = [rock,paper,scissors]
-#variable_computer = random.randint(0,2) # 0,1,2
-
-x = random.choice(typess)
-#print(x)
-
-#typess = [rock_var,paper_var,scissors_var]
-#print(typess)
+nr_letters = 4
+nr_symbols = 2
+nr_numbers = 2
 
 
-if user_choose == "0":
-    print(typess[0])
-    print("Computer choose")
-    if x == typess[2]:
-        print(x)
-        print("u win")
-    elif x == typess[0]:
-        print(x)
-        print("draw")
-    elif x == typess[1]:
-        print(x)
-        print("u lose")
-elif user_choose == "1":
-    print(typess[1])
-    print("Computer choose")
-    if x == typess[2]:
-        print(x)
-        print("u lose")
-    elif x == typess[0]:
-        print(x)
-        print("u win")
-    elif x == typess[1]:
-        print(x)
-        print("draw")
-elif user_choose == "2":
-    print(typess[2])
-    print("Computer choose")
-    if x == typess[2]:
-        print(x)
-        print("draw")
-    elif x == typess[0]:
-        print(x)
-        print("u lose")
-    elif x == typess[1]:
-        print(x)
-        print("u win")
-else:
-    print("Unknown choose")
+#add random letters
+random_letters = []
+for element in range(nr_letters):
+    random_letters.append(random.choice(letters))
+str_element_random_letters = ''
+for element in random_letters:
+    str_element_random_letters += element
 
 
-# Rock wins against scissors.
-# Scissors win against paper.
-# Paper wins against rock.
+#add random symbols
+random_symbols = []
+for element in range(nr_symbols):
+    random_symbols.append(random.choice(numbers))
+str_element_random_symbols = ''
+for element in random_symbols:
+    str_element_random_symbols += element
 
-# if user_choose == "0":
-#     print(rock)
-#     if variable_computer == 2:
-#         print("u win")
-#         print(variable_computer)
-#     elif variable_computer == 0:
-#         print("draw")
-#         print(variable_computer)
-#     else:
-#         print("u lose")
-#         print(variable_computer)
-# elif user_choose == "1":
-#     print(paper)
-# elif user_choose == "2":
-#     print(scissors)
-# else:
-#     print("Unknown choose")
-#
+
+#add random numbers
+random_numbers = []
+for element in range(nr_symbols):
+    random_numbers.append(random.choice(symbols))
+str_element_random_numbers = ''
+for element in random_numbers:
+    str_element_random_numbers += element
+
+
+# add shuffling to
+x = []
+b = []
+c = ''
+x.append(random_letters + random_symbols + random_numbers)
+for element in x:
+    b += element
+random.shuffle(b)
+for element in b:
+    c += element
+
+
+print(f"No shuffling: {str_element_random_letters}{str_element_random_symbols}{str_element_random_numbers}")
+print(f"With shuffling: {c}")
+
+
+
+password = []
+for char in range(nr_letters):
+    password.append(random.choice(letters))
+
+for char in range(nr_symbols):
+    password.append(random.choice(symbols))
+
+for char in range(nr_numbers):
+    password.append(random.choice(numbers))
+
+random.shuffle(password)
+c_password = ''
+for char in password:
+    c_password +=char
+
+print(f"With shuffling2: {c_password}")
+
+
+
+
+
+
+

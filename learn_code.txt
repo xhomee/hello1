@@ -535,6 +535,175 @@ or u can use
 
 
 
+5 day 26.01.23
+
+fruits = ["Strawberries","Nectarines","Apples","Grapes","Peaches","Cherries","Pears"]
+for fruit in fruits:
+    print(fruit)
+
+
+
+# 🚨 Don't change the code below 👇
+student_heights = input("Input a list of student heights ").split()
+for n in range(0, len(student_heights)):
+  student_heights[n] = int(student_heights[n])
+# 🚨 Don't change the code above 👆
+
+all_height = 0
+for student_all_height in student_heights:
+    all_height += student_all_height
+    #print(all_height)
+
+quantity = []
+for quantity_of_students in student_heights:
+    quantity.append(quantity_of_students - quantity_of_students +1)
+    student_quantity = quantity.count(1)
+    #print(student_quantity)
+
+student_average = round(all_height / student_quantity)
+# print(round(student_average))
+
+print(f"Average height rounded to the nearest whole number = {student_average}")
+
+
+
+all_height = 0
+for student_all_height in student_heights:
+    all_height += student_all_height
+
+quantity = 0
+for quantity_of_students in student_heights:
+    quantity +=1
+
+print(round(all_height/quantity))
+
+
+
+student_scores = [78, 65, 89, 86, 55, 91, 64, 89]
+b = [0]
+for items in student_scores:
+    if items > b[0]:
+        b.append(items)
+        b.pop(0)
+
+print(f"The highest score in the class is: {b[0]}")
+
+
+x = 0
+for items in student_scores:
+    if items>x:
+        x = items
+print(x)
+
+
+
+for number in range(1,10):
+    print(number)
+: 1 2 3 4 5 6 7 8 9
+
+for number in range(1,11,3):
+    print(number)
+: 1 4 7 10
+
+x = 0
+for number in range(1,101):
+    x+=number
+    print(x)
+
+x = 0
+for even in range(0,101,2):
+    x +=even
+print(x)
+
+
+
+# Your program should print each number from 1 to 100 in turn.
+# When the number is divisible by 3 then instead of printing the number it should print "Fizz".
+# When the number is divisible by 5, then instead of printing the number it should print "Buzz".`
+#   And if the number is divisible by both 3 and 5 e.g. 15 then instead of the number it should print "FizzBuzz"
+for number in range(1,101):
+    if number %3 == 0 and number %5 == 0:
+        print("FizzBuzz")
+    elif number % 3 == 0:
+        print("Fizz")
+    elif number % 5 == 0:
+        print("Buzz")
+    else:
+        print(number)
+
+
+
+#Password Generator Project
+import random
+letters = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z', 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z']
+symbols = ['!', '#', '$', '%', '&', '(', ')', '*', '+']
+numbers = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9']
+
+print("Welcome to the PyPassword Generator!")
+nr_letters= int(input("How many letters would you like in your password?\n"))
+nr_symbols = int(input(f"How many symbols would you like?\n"))
+nr_numbers = int(input(f"How many numbers would you like?\n"))
+
+
+#add random letters
+random_letters = []
+for element in range(nr_letters):
+    random_letters.append(random.choice(letters))
+str_element_random_letters = ''
+for element in random_letters:
+    str_element_random_letters += element
+
+
+#add random symbols
+random_symbols = []
+for element in range(nr_symbols):
+    random_symbols.append(random.choice(numbers))
+str_element_random_symbols = ''
+for element in random_symbols:
+    str_element_random_symbols += element
+
+
+#add random numbers
+random_numbers = []
+for element in range(nr_symbols):
+    random_numbers.append(random.choice(symbols))
+str_element_random_numbers = ''
+for element in random_numbers:
+    str_element_random_numbers += element
+
+
+# add shuffling to
+x = []
+b = []
+c = ''
+x.append(random_letters + random_symbols + random_numbers)
+for element in x:
+    b += element
+random.shuffle(b)
+for element in b:
+    c += element
+
+
+print(f"No shuffling: {str_element_random_letters}{str_element_random_symbols}{str_element_random_numbers}")
+print(f"With shuffling: {c}")
+
+====
+password = []
+for char in range(nr_letters):
+    password.append(random.choice(letters))
+
+for char in range(nr_symbols):
+    password.append(random.choice(symbols))
+
+for char in range(nr_numbers):
+    password.append(random.choice(numbers))
+
+random.shuffle(password)
+c_password = ''
+for char in password:
+    c_password +=char
+
+print(f"With shuffling2: {c_password}")
 
 
 
