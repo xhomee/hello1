@@ -707,12 +707,160 @@ print(f"With shuffling2: {c_password}")
 
 
 
+6 day 30.01.23
+
+
+def my_function():
+    print("hello")
+    print("bye")
+
+my_function()
+: hello
+: bye
 
 
 
+def turn_right():
+    turn_left()
+    turn_left()
+    turn_left()
+
+
+def step():
+    move()
+    turn_left()
+    move()
+    turn_right()
+    move()
+    turn_right()
+    move()
+    turn_left()
+
+for inf in range(6):
+    step()
 
 
 
+while at_goal() == False:
+    step()
+
+while not at_goal():
+    step()
+
+
+def turn_right():
+    turn_left()
+    turn_left()
+    turn_left()
+
+def go_around():
+    turn_left()
+    move()
+    turn_right()
+    move()
+    turn_right()
+    move()
+    turn_left()
+
+while at_goal() == False:
+    if front_is_clear() == True:
+        while front_is_clear() == True:
+            if at_goal() == False:
+                move()
+            elif at_goal() == True:
+                done()
+    elif wall_in_front() == True:
+        while wall_in_front() == True:
+            go_around()
+
+# or u can use this
+while not at_goal():
+    if wall_in_front():
+        go_around()
+    else:
+        move()
+
+
+#https://reeborg.ca/reeborg.html hurdle 4
+def turn_right():
+    turn_left()
+    turn_left()
+    turn_left()
+
+while not at_goal():
+    if wall_in_front() and wall_on_right():
+        turn_left()
+        if wall_on_right() and wall_in_front():
+            turn_left()
+        if wall_on_right():
+            move()
+        elif right_is_clear():
+            turn_right()
+            move()
+    elif front_is_clear() and wall_on_right():
+        move()
+    else:
+        turn_right()
+        move()
+
+
+def jump():
+    turn_left()
+    while wall_on_right():
+        move()
+    turn_right()
+    move()
+    turn_right()
+    while front_is_clear():
+        move()
+    turn_left()
+
+while not at_goal():
+    if wall_in_front():
+        jump()
+    else:
+        move()
+
+
+
+#https://reeborg.ca/reeborg.html maze 4
+def turn_right():
+    turn_left()
+    turn_left()
+    turn_left()
+
+while not at_goal():
+    if wall_in_front() and wall_on_right():
+        turn_left()
+    elif right_is_clear():
+        if right_is_clear() != True:
+            turn_left()
+            move()
+        else:
+            turn_right()
+            move()
+    else:
+        move()
+
+
+while not at_goal():
+    if wall_in_front() and wall_on_right():
+        turn_left()
+    elif right_is_clear():
+            turn_right()
+            move()
+    else:
+        move()
+
+
+while not at_goal():
+    if right_is_clear():
+        turn_right()
+        move()
+    elif front_is_clear():
+        move()
+    else:
+        turn_left()
 
 
 

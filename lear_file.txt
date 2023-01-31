@@ -156,6 +156,19 @@ random.shuffle() - перемішати список
 
 
 
+6 day 30.01.23
+code blocks, functions, while loops
+
+#Defining Function  визначення функції
+def my_function():
+    #do this
+    #Then do this
+    #Finally do this
+#Calling Functions  виклик функції
+my_function()
+
+while something_is_true:
+    #Do something repeatedly - робити щось неодноразово
 
 
 
