@@ -172,9 +172,22 @@ while something_is_true:
 
 
 
+7 day 31.01.23
+hangman
+
+for position in range(len(chosen_word)):
+    letter = chosen_word[position]  - сказати що позиція letter буде номером позиції
+
+if not True:
+
+a= 3
+if not a>1: - True
 
 
-
+end_of_game = False
+while not end_of_game:
+    ...
+    end_of_game = True
 
 
 
