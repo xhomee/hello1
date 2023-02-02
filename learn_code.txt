@@ -1138,3 +1138,358 @@ while not end_of_game:
     if '_' not in add_underscore:
         end_of_game = True
         print("You win")
+
+
+
+import random
+import pi_module
+
+word_list = ["avadakadabra", "baboon", "camel"]
+#pi_module.world_list_ua
+x = pi_module.word_list_eng
+chosen_word = random.choice(x)
+lives = 6
+end_of_game = False
+
+print(pi_module.logo)
+
+# NEED add _ in list
+add_underscore = []
+for letters in chosen_word:
+    add_underscore.append("_")
+
+
+while not end_of_game:
+    while not lives <= 0:
+        guess = input("Enter a letter ").lower()  # original
+        if guess in add_underscore:
+            print("This letter already exists")
+            print("")
+
+        elif guess in chosen_word:
+            for position in range(len(chosen_word)):
+                letter = chosen_word[position]
+                if letter == guess:
+                    add_underscore[position] = letter
+            break
+
+        else:
+            lives -=1
+            print(f"{guess} not in the word")
+            break
+
+
+    print(pi_module.stages[lives])
+    print(f"{' '.join(add_underscore)}    word length: {len(chosen_word)}")
+    print("")
+
+    if lives <= 0:
+        end_of_game = True
+        print("Your lose")
+
+    if '_' not in add_underscore:
+        end_of_game = True
+        print("You win")
+
+
+
+8 day 1.02.23
+
+def great_with_name(name):
+    print(f"hello {name}")
+
+great_with_name("ande")
+
+
+def great_with(name, location):
+    print(f"Helllo {name}")
+    print(f"U location is {location}")
+
+great_with("andrey", "Kyiv")
+
+
+great_with(name = "andrey", location = "Kyiv")
+
+
+
+#Write your code below this line 👇
+import math
+def paint_calc(height, width, cover):
+    exitt = math.ceil(height*width/cover)
+    print(f"You'll need {exitt} cans of paint.")
+
+#Write your code above this line 👆
+# Define a function called paint_calc() so that the code below works.
+
+# 🚨 Don't change the code below 👇
+test_h = int(input("Height of wall: "))
+test_w = int(input("Width of wall: "))
+coverage = 5
+paint_calc(height=test_h, width=test_w, cover=coverage)
+
+
+
+def prime_checker(number):
+    if number % 2 == 0 or number % 3 == 0:
+        print("It's not a prime number.")
+    else:
+        print("It's a prime number.")
+
+
+
+def prime_checker(number):
+    is_prime = True
+    for i in range(2, number):
+        if number % i == 0:
+            is_prime = False
+            print(i)
+    if is_prime:
+        print("It's not a prime number.")
+    else:
+        print("It's a prime number.")
+
+
+
+
+
+##############################
+# part 1
+alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
+
+#direction = input("Type 'encode' to encrypt, type 'decode' to decrypt:\n")
+#text = input("Type your message:\n").lower()
+#shift = int(input("Type the shift number:\n"))
+
+def encrypt(text , shift):
+    # create number of word
+    text2 = []
+    for element in text:
+        x = alphabet.index(element)
+        text2.append(x)
+    #print(text2)
+
+    # add shift to word
+    save3 = []
+    for element in text2:
+        if element + shift > 25:        # 26 english letters
+            key = (element + shift) - 26
+            save3.append(key)
+        else:
+            element += shift
+            save3.append(element)
+    #print(save3)
+
+    # print encrypted word
+    save4 = ""
+    for element in save3:
+        x = alphabet[element]
+        save4 += x
+    return save4
+
+
+
+x = encrypt(text= "civilization", shift= 23)
+print(f"Your word is: {x}")
+
+
+
+#######################
+
+def encrypt_teatcher(plain_text, shift_amount):
+    chipher_text = ""
+    for letter in plain_text:
+        position = alphabet.index(letter)
+        new_position = position + shift_amount
+        new_letter = alphabet[new_position]
+        chipher_text +=new_letter
+    print(f"The encoded text is: {chipher_text}")
+##############################
+
+def encrypt(plain_text, shift_amount):
+    chipher_text = ""
+    for letter in plain_text:
+        position = alphabet.index(letter)
+        if position + shift_amount > 25:
+            new_position = (position + shift_amount) - 26
+        else:
+            new_position = position + shift_amount
+        new_letter = alphabet[new_position]
+        chipher_text +=new_letter
+    print(f"The encoded text is: {chipher_text}")
+
+def decryppt(plain_text, shift_amount):
+    chipher_text = ""
+    for letter in plain_text:
+        position = alphabet.index(letter)
+        if position - shift_amount < 0:
+            new_position = (26 + (position - shift_amount))
+        else:
+            new_position = position - shift_amount
+        new_letter = alphabet[new_position]
+        chipher_text +=new_letter
+    print(f"The decode text is: {chipher_text}")
+
+##########
+alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z','a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
+
+direction = input("Type 'encode' to encrypt, type 'decode' to decrypt:\n")
+# text = input("Type your message:\n").lower()
+# shift = int(input("Type the shift number:\n"))
+
+def encrypt(plain_text, shift_amount):
+    chipher_text = ""
+    for letter in plain_text:
+        position = alphabet.index(letter)
+        if position + shift_amount > 25:
+            new_position = (position + shift_amount) - 26
+        else:
+            new_position = position + shift_amount
+        new_letter = alphabet[new_position]
+        chipher_text +=new_letter
+    print(f"The encoded text is: {chipher_text}")
+
+def decryppt(plain_text, shift_amount):
+    chipher_text = ""
+    for letter in plain_text:
+        position = alphabet.index(letter)
+        if position - shift_amount < 0:
+            new_position = (26 + (position - shift_amount))
+        else:
+            new_position = position - shift_amount
+        new_letter = alphabet[new_position]
+        chipher_text +=new_letter
+    print(f"The decode text is: {chipher_text}")
+
+
+if direction == "encode" or direction == "e":
+    text = input("Type your message:\n").lower()
+    shift = int(input("Type the shift number:\n"))
+    encrypt(plain_text=text, shift_amount=shift)
+    #encrypt(plain_text= "civilization", shift_amount= 15)
+elif direction == "decode" or direction == "d":
+    text = input("Type your message:\n").lower()
+    shift = int(input("Type the shift number:\n"))
+    decryppt(plain_text=text, shift_amount=shift)
+    #decryppt(plain_text= "rxkxaxopixdc", shift_amount= 15)
+elif direction == "xhomee":
+    print("U god")
+else:
+    print("I dont know this comand")
+
+
+#
+# encrypt(plain_text= "civilization", shift_amount= 15)
+# decryppt(plain_text= "rxkxaxopixdc", shift_amount= 15) khoorzsdpex
+
+
+#####################
+#ster 3 end
+alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
+
+direction = input("Type 'encode or e' to encrypt, type 'decode or d' to decrypt:\n")
+text = input("Type your message:\n").lower()
+shift = int(input("Type the shift number:\n"))
+
+def caesar(text_t, shift_t, direction_t):
+    chipher_text = ""
+    for letter in text_t:
+        position = alphabet.index(letter)
+        if direction_t == "encode" or direction_t == "e":
+            if position + shift_t > 25:
+                new_position = (position + shift_t) - 26
+            else:
+                new_position = position + shift_t
+        elif direction_t == "decode" or direction_t == "d":
+            if position - shift_t < 0:
+                new_position = (26 + (position - shift_t))
+            else:
+                new_position = position - shift_t
+        else:
+            print("I dont know this comand")
+
+        new_letter = alphabet[new_position]
+        chipher_text +=new_letter
+    print(f"The {direction_t} text is: {chipher_text}")
+
+caesar(text_t=text, shift_t= shift, direction_t= direction)
+
+
+#########
+day 8 end
+
+from pi_module import logo
+alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
+print(logo)
+
+def caesar(text_t, shift_t, direction_t):
+    end_text = ""
+    for letter in text_t:
+        if letter not in alphabet:
+            end_text += letter
+        else:
+            position = alphabet.index(letter)
+            if direction_t == "encode" or direction_t == "e":
+                if position + shift_t > 25:
+                    new_position = (position + shift_t) - 26
+                else:
+                    new_position = position + shift_t
+            elif direction_t == "decode" or direction_t == "d":
+                if position - shift_t < 0:
+                    new_position = (26 + (position - shift_t))
+                else:
+                    new_position = position - shift_t
+            else:
+                print("I dont know this comand")
+
+            new_letter = alphabet[new_position]
+            end_text +=new_letter
+    print(f"The {direction_t} text is: {end_text}")
+    print("")
+
+
+code_working = True
+while code_working:
+    direction = input("Type 'encode or e' to encrypt, type 'decode or d' to decrypt:\n")
+    text = input("Type your message:\n").lower()
+    shift = int(input("Type the shift number:\n"))
+
+
+    if shift > 26 :
+        x = shift % 26
+    else:
+        x = shift
+    caesar(text_t=text, shift_t=x, direction_t=direction)
+
+    end = input("Type 'yes or y' if you want to go again. Otherwise type 'no or n'.\n").lower()
+    if end == "yes" or end == "y":
+        pass
+    elif end == "xhomee":
+        print("Your a god")
+        pass
+    else:
+        code_working = False
+        print("Good Bye")
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -179,7 +179,6 @@ for position in range(len(chosen_word)):
     letter = chosen_word[position]  - сказати що позиція letter буде номером позиції
 
 if not True:
-
 a= 3
 if not a>1: - True
 
@@ -188,6 +187,37 @@ end_of_game = False
 while not end_of_game:
     ...
     end_of_game = True
+
+
+
+8 day 1.02.23
+funcrions with inputs
+arguments & parametrs
+
+def my_function(something):             something = 123
+    #Do this with something             parameter   argument
+    #Then do this
+
+
+math.ceil - округлення в більшу сторону
+math.float - округлення в меньшу сторону
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
