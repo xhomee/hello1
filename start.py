@@ -1,25 +1,53 @@
-print("Welcome to the rollercoaster!")
-height = int(input("What is your height in cm ? "))
-bill = 0
+from pi_module import logo
+alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
+print(logo)
 
-if height >= 120:
-    print("Your a welcome!")
-    age = int(input("What is your age? "))
-    if age < 12:
-        bill = 5
-        print("Child ticket coasts 5$")
-    elif age <= 18:
-        bill = 7
-        print("Youth ticket coasts 7$")
-    elif age >= 45 and age <= 55:
-        bill = 0
-        print("Youth ticket coasts 0$")
+def caesar(text_t, shift_t, direction_t):
+    end_text = ""
+    for letter in text_t:
+        if letter not in alphabet:
+            end_text += letter
+        else:
+            position = alphabet.index(letter)
+            if direction_t == "encode" or direction_t == "e":
+                if position + shift_t > 25:
+                    new_position = (position + shift_t) - 26
+                else:
+                    new_position = position + shift_t
+            elif direction_t == "decode" or direction_t == "d":
+                if position - shift_t < 0:
+                    new_position = (26 + (position - shift_t))
+                else:
+                    new_position = position - shift_t
+            else:
+                print("I dont know this comand")
+
+            new_letter = alphabet[new_position]
+            end_text +=new_letter
+    print(f"The {direction_t} text is: {end_text}")
+    print("")
+
+
+code_working = True
+while code_working:
+    direction = input("Type 'encode or e' to encrypt, type 'decode or d' to decrypt:\n")
+    text = input("Type your message:\n").lower()
+    shift = int(input("Type the shift number:\n"))
+
+
+    if shift > 26 :
+        x = shift % 26
     else:
-        bill = 12
-        print("Adult ticket costs 12$")
+        x = shift
+    caesar(text_t=text, shift_t=x, direction_t=direction)
 
-    wants_photo = input("Do you want a photo taken? Y or N ")
-    if wants_photo == "Y" or wants_photo == "y":
-        bill += 3
+    end = input("Type 'yes or y' if you want to go again. Otherwise type 'no or n'.\n").lower()
+    if end == "yes" or end == "y":
+        pass
+    elif end == "xhomee":
+        print("Your a god")
+        pass
+    else:
+        code_working = False
+        print("Good Bye")
 
-    print(f"Your final bill is {bill}")

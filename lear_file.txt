@@ -2,6 +2,7 @@
 
 \n - сепарація
 + конкатинація
+\ - можна використовувати для того щоб не бачило " ' в строці виводу
 
 variable - змінна
 
@@ -107,3 +108,120 @@ not E        якщо умова True то замінить її на false
 
 .lover() = переновить всі символи в нижній регістр
 .count() = підраховує скільки разів символ повторюється
+
+
+
+4 day 24.01.23
+Randomisation and Python Lists  - списки
+
+pi_module.pi - створення свого модуля
+
+random.random() - від 0 до 1 але якщо помножити то можна зробити до будь якого числа - random_float*5 але не включаючи 5
+
+
+Lists - список який можна назвати структурою данних Data Structure
+fruits = [item1, item2] - можуть мати різні типи данних. item1 = [0] or [-2] item2= [0] or [-1]
+fruits[0] = 'item3'  - запише item3 замість item1
+
+https://docs.python.org/3/tutorial/datastructures.html
+.append() - додасть один пункт в кінець списку
+.extend(["hi","hello"]) - додасть декілька елементів в кінець списку
+
+.split() - позволяє розділити строку на окремі компоненти використовуючи якийсь дільник наприклад (",")
+.choise() - вибрати
+
+list1 = [1]
+list2 = [2]
+list3 = [list1, list2] список всередині списку - [[1], [2]]
+
+
+
+5 day 26.01.23
+loops
+
+for loop
+for single_item in list_of_items:   - Цикл дозоляє виконати одну і ту саме строку коді декулька разів
+    #Do something to each item - зробити щось з кожним предметом.
+
+sum - дає суму всіх пінктув в списку
+max - показує масимальне значення в списку
+min - мінімальне значення
+
+range function - функція діапазону
+for number in range(a, b):  - не включая останній символ (a,b,c) - C = крок
+    print(number)
+
+random.choice() - вибрати рандомний елемент зі списку
+random.shuffle() - перемішати список
+
+
+
+6 day 30.01.23
+code blocks, functions, while loops
+
+#Defining Function  визначення функції
+def my_function():
+    #do this
+    #Then do this
+    #Finally do this
+#Calling Functions  виклик функції
+my_function()
+
+while something_is_true:
+    #Do something repeatedly - робити щось неодноразово
+
+
+
+7 day 31.01.23
+hangman
+
+for position in range(len(chosen_word)):
+    letter = chosen_word[position]  - сказати що позиція letter буде номером позиції
+
+if not True:
+a= 3
+if not a>1: - True
+
+
+end_of_game = False
+while not end_of_game:
+    ...
+    end_of_game = True
+
+
+
+8 day 1.02.23
+funcrions with inputs
+arguments & parametrs
+
+def my_function(something):             something = 123
+    #Do this with something             parameter   argument
+    #Then do this
+
+
+math.ceil - округлення в більшу сторону
+math.float - округлення в меньшу сторону
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -305,3 +305,1191 @@ if extra_cheese == "Y" or extra_cheese == "y":
 
 print(f"Your final bill is: ${price}.")
 
+
+
+# 🚨 Don't change the code below 👇
+print("Welcome to the Love Calculator!")
+name1 = input("What is your name? \n")
+name2 = input("What is their name? \n")
+
+# 🚨 Don't change the code above 👆
+
+#Write your code below this line 👇
+oll = name1 + name2
+
+t = oll.lower().count("t")
+r = oll.lower().count("r")
+u = oll.lower().count("u")
+e = oll.lower().count("e")
+
+l = oll.lower().count("l")
+o = oll.lower().count("o")
+v = oll.lower().count("v")
+e2 = oll.lower().count("e")
+
+first_numbers = t+r+u+e
+second_numbers = l+o+v+e
+
+make_string = str(first_numbers)+str(second_numbers)
+make_integer = int(make_string)
+
+if make_integer >=40 and make_integer <= 50:
+    print(f"Your score is {make_integer}, you are alright together.")
+elif make_integer < 10 or make_integer > 90:
+    print(f"Your score is {make_integer}, you go together like coke and mentos.")
+else:
+    print(f"Your score is {make_integer}.")
+
+
+
+print('''
+*******************************************************************************
+          |                   |                  |                     |
+ _________|________________.=""_;=.______________|_____________________|_______
+|                   |  ,-"_,=""     `"=.|                  |
+|___________________|__"=._o`"-._        `"=.______________|___________________
+          |                `"=._o`"=._      _`"=._                     |
+ _________|_____________________:=._o "=._."_.-="'"=.__________________|_______
+|                   |    __.--" , ; `"=._o." ,-"""-._ ".   |
+|___________________|_._"  ,. .` ` `` ,  `"-._"-._   ". '__|___________________
+          |           |o`"=._` , "` `; .". ,  "-._"-._; ;              |
+ _________|___________| ;`-.o`"=._; ." ` '`."\` . "-._ /_______________|_______
+|                   | |o;    `"-.o`"=._``  '` " ,__.--o;   |
+|___________________|_| ;     (#) `-.o `"=.`_.--"_o.-; ;___|___________________
+____/______/______/___|o;._    "      `".o|o_.--"    ;o;____/______/______/____
+/______/______/______/_"=._o--._        ; | ;        ; ;/______/______/______/_
+____/______/______/______/__"=._o--._   ;o|o;     _._;o;____/______/______/____
+/______/______/______/______/____"=._o._; | ;_.--"o.--"_/______/______/______/_
+____/______/______/______/______/_____"=.o|o_.--""___/______/______/______/____
+/______/______/______/______/______/______/______/______/______/______/[TomekK]
+*******************************************************************************
+''')
+print("Welcome to Treasure Island.")
+print("Your mission is to find the treasure.")
+
+first_step = input("You're at a cross road. Where do you want to go? Type ""left" ' or ' "right\n""")
+
+
+if first_step == "Left" or first_step == "left" or first_step == "L" or first_step == "l":
+    second_step = input("""You've come to a lake. There is an island in the middle of the lake.
+Type "wait" to wait for a boat. Type "swim" to swim across.\n""")
+    if second_step == "Wait" or second_step == "wait" or second_step == "W" or second_step == "w":
+        third_step = input("You arrive at the island unharmed. There is a house with 3 doors. "
+                           "\nOne red, one yellow and one blue. Which colour do you choose?\n")
+        if third_step == "Red" or third_step == "red" or third_step == "R" or third_step == "r":
+            print("It's a room full of fire. Game Over.")
+        elif third_step == "Blue" or third_step == "blue" or third_step == "B" or third_step == "b":
+            print("You enter a room of beasts. Game Over.")
+        elif third_step == "Yellow" or third_step == "yellow" or third_step == "Y" or third_step == "y":
+            print("You found the treasure! You Win!")
+        elif third_step == "xhomee":
+            print("gg wp")
+        else:
+            print("You chose a door that doesn't exist. Game Over.")
+
+    else:
+        print("You get attacked by an angry trout. Game Over.")
+
+else:
+    print("You fell into a hole. Game Over.")
+
+
+
+4 day
+
+import pi_module
+print(pi_module.pi)
+
+
+
+import random
+
+random_integer = random.randint(1,10)
+print(random_integer)
+print(" ")
+
+random_float = random.random()
+print(random_float)
+print(random_float*5)
+
+print(" ")
+random_float2 = random.uniform(0,5)
+print(random_float2)
+
+
+
+import random
+
+number_random = random.randint(0,1)
+if number_random == 1:
+    print("Heads")
+else:
+    print("Tails")
+
+
+
+states_of_america = [ "Delaware", "Pennsylvania" ]
+print(states_of_america[0])
+: Delaware
+
+states_of_america = [ "Delaware", "Pennsylvania" ]
+print(states_of_america[0])
+
+states_of_america[0] = 'Hello'
+print(states_of_america)
+:Delaware
+:['Hello', 'Pennsylvania']
+
+states_of_america.append("ff")
+print(states_of_america)
+:['Hello', 'Pennsylvania', 'ff']
+
+states_of_america.extend(["hi","hello"])
+print(states_of_america)
+:['Hello', 'Pennsylvania', 'ff', 'hi', 'hello']
+
+
+
+import random
+# Import the random module here
+
+# Split string method
+#names_string = input("Give me everybody's names, separated by a comma. ")
+names_string = "Angela, Ben, Jenny, Michael, Chloe"
+names = names_string.split(", ")
+# 🚨 Don't change the code above 👆
+
+#Write your code below this line 👇
+
+people_len = len(names)
+people_pay = random.randint(0,people_len-1)
+pays = names[people_pay]
+print(f"{pays} is going to buy the meal today!")
+
+or use .choice
+x = random.choice(names)
+print(x)
+
+
+
+fruits = ["Strawberries","Nectarines","Apples","Grapes","Peaches","Cherries","Pears"]
+vegetables =["Spinach","Kale","Tomatoes","Celery", "Potatoes"]
+dirty_dozen2 = [fruits, vegetables]
+print(dirty_dozen2)
+: [['Strawberries', 'Nectarines', 'Apples', 'Grapes', 'Peaches', 'Cherries', 'Pears'], ['Spinach', 'Kale', 'Tomatoes', 'Celery', 'Potatoes']]
+
+print(dirty_dozen2[0][0])
+: Strawberries
+
+
+
+# 🚨 Don't change the code below 👇
+row1 = ["⬜️","️⬜️","️⬜️"]
+row2 = ["⬜️","⬜️","️⬜️"]
+row3 = ["⬜️️","⬜️️","⬜️️"]
+map = [row1, row2, row3]
+print(f"{row1}\n{row2}\n{row3}")
+position = input("Where do you want to put the treasure? ")
+# 🚨 Don't change the code above 👆
+
+#Write your code below this row 👇
+x_variable = int(position[0])
+y_variable = int(position[1])
+
+if x_variable == 1:
+    if y_variable == 1:
+        row1.insert(x_variable, "X")
+        row1.pop(x_variable - 1)
+    elif y_variable == 2:
+        row2.insert(x_variable, "X")
+        row2.pop(x_variable - 1)
+    elif y_variable == 3:
+        row3.insert(x_variable, "X")
+        row3.pop(x_variable - 1)
+elif x_variable == 2:
+    if y_variable == 1:
+        row1.insert(x_variable, "X")
+        row1.pop(x_variable - 1)
+    elif y_variable == 2:
+        row2.insert(x_variable, "X")
+        row2.pop(x_variable - 1)
+    elif y_variable == 3:
+        row3.insert(x_variable, "X")
+        row3.pop(x_variable - 1)
+elif x_variable ==  3:
+    if y_variable == 1:
+        row1.insert(x_variable, "X")
+        row1.pop(x_variable - 1)
+    elif y_variable == 2:
+        row2.insert(x_variable, "X")
+        row2.pop(x_variable - 1)
+    elif y_variable == 3:
+        row3.insert(x_variable, "X")
+        row3.pop(x_variable - 1)
+
+# 🚨 Don't change the code below 👇
+print(f"{row1}\n{row2}\n{row3}")
+
+or u can use
+::::::::::  x = map[y_variable-1][x_variable-1] ="x"
+
+
+
+5 day 26.01.23
+
+fruits = ["Strawberries","Nectarines","Apples","Grapes","Peaches","Cherries","Pears"]
+for fruit in fruits:
+    print(fruit)
+
+
+
+# 🚨 Don't change the code below 👇
+student_heights = input("Input a list of student heights ").split()
+for n in range(0, len(student_heights)):
+  student_heights[n] = int(student_heights[n])
+# 🚨 Don't change the code above 👆
+
+all_height = 0
+for student_all_height in student_heights:
+    all_height += student_all_height
+    #print(all_height)
+
+quantity = []
+for quantity_of_students in student_heights:
+    quantity.append(quantity_of_students - quantity_of_students +1)
+    student_quantity = quantity.count(1)
+    #print(student_quantity)
+
+student_average = round(all_height / student_quantity)
+# print(round(student_average))
+
+print(f"Average height rounded to the nearest whole number = {student_average}")
+
+
+
+all_height = 0
+for student_all_height in student_heights:
+    all_height += student_all_height
+
+quantity = 0
+for quantity_of_students in student_heights:
+    quantity +=1
+
+print(round(all_height/quantity))
+
+
+
+student_scores = [78, 65, 89, 86, 55, 91, 64, 89]
+b = [0]
+for items in student_scores:
+    if items > b[0]:
+        b.append(items)
+        b.pop(0)
+
+print(f"The highest score in the class is: {b[0]}")
+
+
+x = 0
+for items in student_scores:
+    if items>x:
+        x = items
+print(x)
+
+
+
+for number in range(1,10):
+    print(number)
+: 1 2 3 4 5 6 7 8 9
+
+for number in range(1,11,3):
+    print(number)
+: 1 4 7 10
+
+x = 0
+for number in range(1,101):
+    x+=number
+    print(x)
+
+x = 0
+for even in range(0,101,2):
+    x +=even
+print(x)
+
+
+
+# Your program should print each number from 1 to 100 in turn.
+# When the number is divisible by 3 then instead of printing the number it should print "Fizz".
+# When the number is divisible by 5, then instead of printing the number it should print "Buzz".`
+#   And if the number is divisible by both 3 and 5 e.g. 15 then instead of the number it should print "FizzBuzz"
+for number in range(1,101):
+    if number %3 == 0 and number %5 == 0:
+        print("FizzBuzz")
+    elif number % 3 == 0:
+        print("Fizz")
+    elif number % 5 == 0:
+        print("Buzz")
+    else:
+        print(number)
+
+
+
+#Password Generator Project
+import random
+letters = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z', 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z']
+symbols = ['!', '#', '$', '%', '&', '(', ')', '*', '+']
+numbers = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9']
+
+print("Welcome to the PyPassword Generator!")
+nr_letters= int(input("How many letters would you like in your password?\n"))
+nr_symbols = int(input(f"How many symbols would you like?\n"))
+nr_numbers = int(input(f"How many numbers would you like?\n"))
+
+
+#add random letters
+random_letters = []
+for element in range(nr_letters):
+    random_letters.append(random.choice(letters))
+str_element_random_letters = ''
+for element in random_letters:
+    str_element_random_letters += element
+
+
+#add random symbols
+random_symbols = []
+for element in range(nr_symbols):
+    random_symbols.append(random.choice(numbers))
+str_element_random_symbols = ''
+for element in random_symbols:
+    str_element_random_symbols += element
+
+
+#add random numbers
+random_numbers = []
+for element in range(nr_symbols):
+    random_numbers.append(random.choice(symbols))
+str_element_random_numbers = ''
+for element in random_numbers:
+    str_element_random_numbers += element
+
+
+# add shuffling to
+x = []
+b = []
+c = ''
+x.append(random_letters + random_symbols + random_numbers)
+for element in x:
+    b += element
+random.shuffle(b)
+for element in b:
+    c += element
+
+
+print(f"No shuffling: {str_element_random_letters}{str_element_random_symbols}{str_element_random_numbers}")
+print(f"With shuffling: {c}")
+
+====
+password = []
+for char in range(nr_letters):
+    password.append(random.choice(letters))
+
+for char in range(nr_symbols):
+    password.append(random.choice(symbols))
+
+for char in range(nr_numbers):
+    password.append(random.choice(numbers))
+
+random.shuffle(password)
+c_password = ''
+for char in password:
+    c_password +=char
+
+print(f"With shuffling2: {c_password}")
+
+
+
+6 day 30.01.23
+
+
+def my_function():
+    print("hello")
+    print("bye")
+
+my_function()
+: hello
+: bye
+
+
+
+def turn_right():
+    turn_left()
+    turn_left()
+    turn_left()
+
+
+def step():
+    move()
+    turn_left()
+    move()
+    turn_right()
+    move()
+    turn_right()
+    move()
+    turn_left()
+
+for inf in range(6):
+    step()
+
+
+
+while at_goal() == False:
+    step()
+
+while not at_goal():
+    step()
+
+
+def turn_right():
+    turn_left()
+    turn_left()
+    turn_left()
+
+def go_around():
+    turn_left()
+    move()
+    turn_right()
+    move()
+    turn_right()
+    move()
+    turn_left()
+
+while at_goal() == False:
+    if front_is_clear() == True:
+        while front_is_clear() == True:
+            if at_goal() == False:
+                move()
+            elif at_goal() == True:
+                done()
+    elif wall_in_front() == True:
+        while wall_in_front() == True:
+            go_around()
+
+# or u can use this
+while not at_goal():
+    if wall_in_front():
+        go_around()
+    else:
+        move()
+
+
+#https://reeborg.ca/reeborg.html hurdle 4
+def turn_right():
+    turn_left()
+    turn_left()
+    turn_left()
+
+while not at_goal():
+    if wall_in_front() and wall_on_right():
+        turn_left()
+        if wall_on_right() and wall_in_front():
+            turn_left()
+        if wall_on_right():
+            move()
+        elif right_is_clear():
+            turn_right()
+            move()
+    elif front_is_clear() and wall_on_right():
+        move()
+    else:
+        turn_right()
+        move()
+
+
+def jump():
+    turn_left()
+    while wall_on_right():
+        move()
+    turn_right()
+    move()
+    turn_right()
+    while front_is_clear():
+        move()
+    turn_left()
+
+while not at_goal():
+    if wall_in_front():
+        jump()
+    else:
+        move()
+
+
+
+#https://reeborg.ca/reeborg.html maze 4
+def turn_right():
+    turn_left()
+    turn_left()
+    turn_left()
+
+while not at_goal():
+    if wall_in_front() and wall_on_right():
+        turn_left()
+    elif right_is_clear():
+        if right_is_clear() != True:
+            turn_left()
+            move()
+        else:
+            turn_right()
+            move()
+    else:
+        move()
+
+
+while not at_goal():
+    if wall_in_front() and wall_on_right():
+        turn_left()
+    elif right_is_clear():
+            turn_right()
+            move()
+    else:
+        move()
+
+
+while not at_goal():
+    if right_is_clear():
+        turn_right()
+        move()
+    elif front_is_clear():
+        move()
+    else:
+        turn_left()
+
+
+
+7 day 31.01.23 hangman
+
+a= 3
+if not a>1: - False
+
+a = 0
+if not a>1: - True
+
+
+
+#Step 1
+import random
+#word_list = ["мумія", "кірник", "карамелька"] #original
+word_list = ["soprose"]
+chosen_word = random.choice(word_list)
+#print(f'Pssst, the solution is {chosen_word}.')
+
+# NEED add - in list
+add_underscore = [] # -------
+for letters in chosen_word:
+    add_underscore.append("-")
+
+
+#guess = input("Enter a letter ").lower() # original
+guess = "r"
+
+# NEED create list from world_list
+chosen_word_list = []
+for index in chosen_word:
+    chosen_word_list+=index
+print(chosen_word_list)
+
+# NEED change/add letters in underscore word
+for letter in chosen_word_list:
+    if letter == guess:
+        x = chosen_word_list.index(letter)
+        chosen_word_list.pop(x)
+        chosen_word_list.insert(x, 0)
+
+        add_underscore.pop(x)
+        add_underscore.insert(x, letter)
+    else:
+        pass
+print(add_underscore)
+
+
+
+dispay = ''
+for index in add_underscore:
+    dispay+=index
+print(dispay)
+
+
+
+:::::
+# NEED add _ in list
+add_underscore = []
+for letters in chosen_word:
+    add_underscore.append("_")
+
+#guess = input("Enter a letter ").lower() # original
+
+for position in range(len(chosen_word)):
+    letter = chosen_word[position]
+    if letter == guess:
+        add_underscore[position] = letter
+print(add_underscore)
+
+
+dispay = ''
+for index in add_underscore:
+    dispay+=index
+print(dispay)
+
+
+
+#Step 3
+import random
+#word_list = ["мумія", "кірник", "карамелька"] #original
+word_list = ["soprose"]
+chosen_word = random.choice(word_list)
+#print(f'Pssst, the solution is {chosen_word}.')
+#guess = "r"
+
+# NEED add _ in list
+add_underscore = []
+for letters in chosen_word:
+    add_underscore.append("_")
+
+#guess = input("Enter a letter ").lower() # original
+
+def first():
+    guess = input("Enter a letter ").lower()  # original
+
+    for position in range(len(chosen_word)):
+        letter = chosen_word[position]
+        if letter == guess:
+            add_underscore[position] = letter
+
+    print(add_underscore)
+
+a= 1
+while not a<0:
+    if '_' in add_underscore:
+        first()
+    else:
+        print("You win")
+        break
+
+
+    # dispay = ''
+    # for index in add_underscore:
+    #     dispay+=index
+    # print(dispay)
+
+
+
+::::
+def first():
+    guess = input("Enter a letter ").lower()  # original
+
+    for position in range(len(chosen_word)):
+        letter = chosen_word[position]
+        if letter == guess:
+            add_underscore[position] = letter
+
+    print(add_underscore)
+
+end_of_game = False
+
+while not end_of_game:
+    if '_' not in add_underscore:
+        end_of_game = True
+        print("You win")
+    else:
+        first()
+
+
+
+::::::
+def first():
+    guess = input("Enter a letter ").lower()  # original
+
+    for position in range(len(chosen_word)):
+        letter = chosen_word[position]
+        if letter == guess:
+            add_underscore[position] = letter
+
+    print(add_underscore)
+
+end_of_game = False
+
+while not end_of_game:
+    first()
+    if '_' not in add_underscore:
+        end_of_game = True
+        print("You win")
+
+
+
+
+#Step 4
+import random
+stages = ['''
+  +---+
+  |   |
+  O   |
+ /|\  |
+ / \  |
+      |
+=========
+''', '''
+  +---+
+  |   |
+  O   |
+ /|\  |
+ /    |
+      |
+=========
+''', '''
+  +---+
+  |   |
+  O   |
+ /|\  |
+      |
+      |
+=========
+''', '''
+  +---+
+  |   |
+  O   |
+ /|   |
+      |
+      |
+=========''', '''
+  +---+
+  |   |
+  O   |
+  |   |
+      |
+      |
+=========
+''', '''
+  +---+
+  |   |
+  O   |
+      |
+      |
+      |
+=========
+''', '''
+  +---+
+  |   |
+      |
+      |
+      |
+      |
+=========
+''']
+#word_list = ["мумія", "кірник", "карамелька"] #original
+word_list = ["soprose"]
+chosen_word = random.choice(word_list)
+
+lives = 6
+
+
+#print(f'Pssst, the solution is {chosen_word}.')
+
+
+# NEED add _ in list
+add_underscore = []
+for letters in chosen_word:
+    add_underscore.append("_")
+
+
+
+end_of_game = False
+
+while not end_of_game:
+    while not lives <= 0:
+        guess = input("Enter a letter ").lower()  # original
+        if guess in chosen_word:
+            for position in range(len(chosen_word)):
+                letter = chosen_word[position]
+                if letter == guess:
+                    add_underscore[position] = letter
+            break
+        else:
+            lives -=1
+            if lives == 6:
+                print(stages[5])
+            elif lives == 5:
+                print(stages[4])
+            elif lives == 4:
+                print(stages[3])
+            elif lives == 3:
+                print(stages[2])
+            elif lives == 2:
+                print(stages[1])
+            elif lives == 1:
+                print(stages[0])
+            break
+
+
+    print(f"{' '.join(add_underscore)}")
+
+    if lives <= 0:
+        end_of_game = True
+        print("Your lose")
+
+
+    if '_' not in add_underscore:
+        end_of_game = True
+        print("You win")
+
+
+
+import random
+import pi_module
+
+word_list = ["avadakadabra", "baboon", "camel"]
+#pi_module.world_list_ua
+x = pi_module.word_list_eng
+chosen_word = random.choice(x)
+lives = 6
+end_of_game = False
+
+print(pi_module.logo)
+
+# NEED add _ in list
+add_underscore = []
+for letters in chosen_word:
+    add_underscore.append("_")
+
+
+while not end_of_game:
+    while not lives <= 0:
+        guess = input("Enter a letter ").lower()  # original
+        if guess in add_underscore:
+            print("This letter already exists")
+            print("")
+
+        elif guess in chosen_word:
+            for position in range(len(chosen_word)):
+                letter = chosen_word[position]
+                if letter == guess:
+                    add_underscore[position] = letter
+            break
+
+        else:
+            lives -=1
+            print(f"{guess} not in the word")
+            break
+
+
+    print(pi_module.stages[lives])
+    print(f"{' '.join(add_underscore)}    word length: {len(chosen_word)}")
+    print("")
+
+    if lives <= 0:
+        end_of_game = True
+        print("Your lose")
+
+    if '_' not in add_underscore:
+        end_of_game = True
+        print("You win")
+
+
+
+8 day 1.02.23
+
+def great_with_name(name):
+    print(f"hello {name}")
+
+great_with_name("ande")
+
+
+def great_with(name, location):
+    print(f"Helllo {name}")
+    print(f"U location is {location}")
+
+great_with("andrey", "Kyiv")
+
+
+great_with(name = "andrey", location = "Kyiv")
+
+
+
+#Write your code below this line 👇
+import math
+def paint_calc(height, width, cover):
+    exitt = math.ceil(height*width/cover)
+    print(f"You'll need {exitt} cans of paint.")
+
+#Write your code above this line 👆
+# Define a function called paint_calc() so that the code below works.
+
+# 🚨 Don't change the code below 👇
+test_h = int(input("Height of wall: "))
+test_w = int(input("Width of wall: "))
+coverage = 5
+paint_calc(height=test_h, width=test_w, cover=coverage)
+
+
+
+def prime_checker(number):
+    if number % 2 == 0 or number % 3 == 0:
+        print("It's not a prime number.")
+    else:
+        print("It's a prime number.")
+
+
+
+def prime_checker(number):
+    is_prime = True
+    for i in range(2, number):
+        if number % i == 0:
+            is_prime = False
+            print(i)
+    if is_prime:
+        print("It's not a prime number.")
+    else:
+        print("It's a prime number.")
+
+
+
+
+
+##############################
+# part 1
+alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
+
+#direction = input("Type 'encode' to encrypt, type 'decode' to decrypt:\n")
+#text = input("Type your message:\n").lower()
+#shift = int(input("Type the shift number:\n"))
+
+def encrypt(text , shift):
+    # create number of word
+    text2 = []
+    for element in text:
+        x = alphabet.index(element)
+        text2.append(x)
+    #print(text2)
+
+    # add shift to word
+    save3 = []
+    for element in text2:
+        if element + shift > 25:        # 26 english letters
+            key = (element + shift) - 26
+            save3.append(key)
+        else:
+            element += shift
+            save3.append(element)
+    #print(save3)
+
+    # print encrypted word
+    save4 = ""
+    for element in save3:
+        x = alphabet[element]
+        save4 += x
+    return save4
+
+
+
+x = encrypt(text= "civilization", shift= 23)
+print(f"Your word is: {x}")
+
+
+
+#######################
+
+def encrypt_teatcher(plain_text, shift_amount):
+    chipher_text = ""
+    for letter in plain_text:
+        position = alphabet.index(letter)
+        new_position = position + shift_amount
+        new_letter = alphabet[new_position]
+        chipher_text +=new_letter
+    print(f"The encoded text is: {chipher_text}")
+##############################
+
+def encrypt(plain_text, shift_amount):
+    chipher_text = ""
+    for letter in plain_text:
+        position = alphabet.index(letter)
+        if position + shift_amount > 25:
+            new_position = (position + shift_amount) - 26
+        else:
+            new_position = position + shift_amount
+        new_letter = alphabet[new_position]
+        chipher_text +=new_letter
+    print(f"The encoded text is: {chipher_text}")
+
+def decryppt(plain_text, shift_amount):
+    chipher_text = ""
+    for letter in plain_text:
+        position = alphabet.index(letter)
+        if position - shift_amount < 0:
+            new_position = (26 + (position - shift_amount))
+        else:
+            new_position = position - shift_amount
+        new_letter = alphabet[new_position]
+        chipher_text +=new_letter
+    print(f"The decode text is: {chipher_text}")
+
+##########
+alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z','a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
+
+direction = input("Type 'encode' to encrypt, type 'decode' to decrypt:\n")
+# text = input("Type your message:\n").lower()
+# shift = int(input("Type the shift number:\n"))
+
+def encrypt(plain_text, shift_amount):
+    chipher_text = ""
+    for letter in plain_text:
+        position = alphabet.index(letter)
+        if position + shift_amount > 25:
+            new_position = (position + shift_amount) - 26
+        else:
+            new_position = position + shift_amount
+        new_letter = alphabet[new_position]
+        chipher_text +=new_letter
+    print(f"The encoded text is: {chipher_text}")
+
+def decryppt(plain_text, shift_amount):
+    chipher_text = ""
+    for letter in plain_text:
+        position = alphabet.index(letter)
+        if position - shift_amount < 0:
+            new_position = (26 + (position - shift_amount))
+        else:
+            new_position = position - shift_amount
+        new_letter = alphabet[new_position]
+        chipher_text +=new_letter
+    print(f"The decode text is: {chipher_text}")
+
+
+if direction == "encode" or direction == "e":
+    text = input("Type your message:\n").lower()
+    shift = int(input("Type the shift number:\n"))
+    encrypt(plain_text=text, shift_amount=shift)
+    #encrypt(plain_text= "civilization", shift_amount= 15)
+elif direction == "decode" or direction == "d":
+    text = input("Type your message:\n").lower()
+    shift = int(input("Type the shift number:\n"))
+    decryppt(plain_text=text, shift_amount=shift)
+    #decryppt(plain_text= "rxkxaxopixdc", shift_amount= 15)
+elif direction == "xhomee":
+    print("U god")
+else:
+    print("I dont know this comand")
+
+
+#
+# encrypt(plain_text= "civilization", shift_amount= 15)
+# decryppt(plain_text= "rxkxaxopixdc", shift_amount= 15) khoorzsdpex
+
+
+#####################
+#ster 3 end
+alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
+
+direction = input("Type 'encode or e' to encrypt, type 'decode or d' to decrypt:\n")
+text = input("Type your message:\n").lower()
+shift = int(input("Type the shift number:\n"))
+
+def caesar(text_t, shift_t, direction_t):
+    chipher_text = ""
+    for letter in text_t:
+        position = alphabet.index(letter)
+        if direction_t == "encode" or direction_t == "e":
+            if position + shift_t > 25:
+                new_position = (position + shift_t) - 26
+            else:
+                new_position = position + shift_t
+        elif direction_t == "decode" or direction_t == "d":
+            if position - shift_t < 0:
+                new_position = (26 + (position - shift_t))
+            else:
+                new_position = position - shift_t
+        else:
+            print("I dont know this comand")
+
+        new_letter = alphabet[new_position]
+        chipher_text +=new_letter
+    print(f"The {direction_t} text is: {chipher_text}")
+
+caesar(text_t=text, shift_t= shift, direction_t= direction)
+
+
+#########
+day 8 end
+
+from pi_module import logo
+alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
+print(logo)
+
+def caesar(text_t, shift_t, direction_t):
+    end_text = ""
+    for letter in text_t:
+        if letter not in alphabet:
+            end_text += letter
+        else:
+            position = alphabet.index(letter)
+            if direction_t == "encode" or direction_t == "e":
+                if position + shift_t > 25:
+                    new_position = (position + shift_t) - 26
+                else:
+                    new_position = position + shift_t
+            elif direction_t == "decode" or direction_t == "d":
+                if position - shift_t < 0:
+                    new_position = (26 + (position - shift_t))
+                else:
+                    new_position = position - shift_t
+            else:
+                print("I dont know this comand")
+
+            new_letter = alphabet[new_position]
+            end_text +=new_letter
+    print(f"The {direction_t} text is: {end_text}")
+    print("")
+
+
+code_working = True
+while code_working:
+    direction = input("Type 'encode or e' to encrypt, type 'decode or d' to decrypt:\n")
+    text = input("Type your message:\n").lower()
+    shift = int(input("Type the shift number:\n"))
+
+
+    if shift > 26 :
+        x = shift % 26
+    else:
+        x = shift
+    caesar(text_t=text, shift_t=x, direction_t=direction)
+
+    end = input("Type 'yes or y' if you want to go again. Otherwise type 'no or n'.\n").lower()
+    if end == "yes" or end == "y":
+        pass
+    elif end == "xhomee":
+        print("Your a god")
+        pass
+    else:
+        code_working = False
+        print("Good Bye")
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
