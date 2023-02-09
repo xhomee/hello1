@@ -14,7 +14,7 @@ while poll:
 
 
     check_biggest(you_name=your_name, you_price=your_price)
-    end_poll = input("Are there any other bidders? Type 'yes or 'no'.").lower()
+    end_poll = input("Are there any other bidders? Type 'yes or 'no'.\n").lower()
     if end_poll == "n" or end_poll == "no":
         big = 0
         name = ""
