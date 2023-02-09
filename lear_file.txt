@@ -16,7 +16,7 @@ b = c
 
 data types, numbers, operations, type conversion, f-string
 
-string - строки  в ""
+string - строки в ""
 subscript - метод витягування символів з строки []
 integer - всі числа без десятичних символів .Там можна записувати великі числа так 123_345_534
 float - число з плаваючою точкою
@@ -191,8 +191,8 @@ while not end_of_game:
 
 
 8 day 1.02.23
-funcrions with inputs
-arguments & parametrs
+functions with inputs
+arguments & parameters
 
 def my_function(something):             something = 123
     #Do this with something             parameter   argument
@@ -200,8 +200,36 @@ def my_function(something):             something = 123
 
 
 math.ceil - округлення в більшу сторону
-math.float - округлення в меньшу сторону
+math.float - округлення в меншу сторону
 
+
+
+9 day 9.02.23
+dictionaries & nesting  - словарі та вкладення
+
+{key : Value} - {"bug" : "An error", "function" : "A piece of code", "loop": " The action"}
+dictionary[name_of_element] = "add new element in dictionary with key name_of_element" - or edit existing element
+
+empty_dictionary = {}  - створити новий словник, або можна стерти старий
+
+for key in programming_dictionary:
+    print(key)                                - give a key
+    print(programing_dictionary[key])         - give value
+
+{
+key : [List],
+key2 : {Dictionary}
+}
+
+
+[{
+key : [List],
+key2 : {Dictionary},
+},
+{
+key : value,
+key2 : value,
+}]
 
 
 
