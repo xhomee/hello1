@@ -1,53 +1,26 @@
 from pi_module import logo
-alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
+
 print(logo)
+check_dict = []
 
-def caesar(text_t, shift_t, direction_t):
-    end_text = ""
-    for letter in text_t:
-        if letter not in alphabet:
-            end_text += letter
-        else:
-            position = alphabet.index(letter)
-            if direction_t == "encode" or direction_t == "e":
-                if position + shift_t > 25:
-                    new_position = (position + shift_t) - 26
-                else:
-                    new_position = position + shift_t
-            elif direction_t == "decode" or direction_t == "d":
-                if position - shift_t < 0:
-                    new_position = (26 + (position - shift_t))
-                else:
-                    new_position = position - shift_t
-            else:
-                print("I dont know this comand")
+poll = True
+while poll:
+    your_name = input("What is your name?: ")
+    your_price = int(input("What is your bid?: "))
 
-            new_letter = alphabet[new_position]
-            end_text +=new_letter
-    print(f"The {direction_t} text is: {end_text}")
-    print("")
+    def check_biggest(you_name, you_price):
+        add_dict = {"name": you_name, "price": you_price}
+        check_dict.append(add_dict)
 
 
-code_working = True
-while code_working:
-    direction = input("Type 'encode or e' to encrypt, type 'decode or d' to decrypt:\n")
-    text = input("Type your message:\n").lower()
-    shift = int(input("Type the shift number:\n"))
-
-
-    if shift > 26 :
-        x = shift % 26
-    else:
-        x = shift
-    caesar(text_t=text, shift_t=x, direction_t=direction)
-
-    end = input("Type 'yes or y' if you want to go again. Otherwise type 'no or n'.\n").lower()
-    if end == "yes" or end == "y":
-        pass
-    elif end == "xhomee":
-        print("Your a god")
-        pass
-    else:
-        code_working = False
-        print("Good Bye")
-
+    check_biggest(you_name=your_name, you_price=your_price)
+    end_poll = input("Are there any other bidders? Type 'yes or 'no'.\n").lower()
+    if end_poll == "n" or end_poll == "no":
+        big = 0
+        name = ""
+        for biggest_value in check_dict:
+            if biggest_value["price"] > big:
+                big = biggest_value["price"]
+                name = biggest_value["name"]
+        print(f"The winner is {name} with a bid of ${big}")
+        poll = False
