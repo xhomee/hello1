@@ -1691,14 +1691,203 @@ while not bidding_finished:
 
 
 
+10 day 24.02.23
+def format_name(first_name, last_name):
+    formated_first_name = first_name.title()
+    formated_last_name = last_name.title()
+    return f"{formated_first_name} {formated_last_name}"
+
+
+formated_string = format_name("sergey", "PETRENKo")
+print(formated_string)
+
+print(format_name("sergey", "PETRENKo"))
+
+
+
+def format_name(first_name, last_name):
+    if first_name == "" or last_name == "":
+        return
+    formated_first_name = first_name.title()
+    formated_last_name = last_name.title()
+    return f"{formated_first_name} {formated_last_name}"
+
+print(format_name(input("What is your name? "), input("What is your last name? ")))
 
 
 
 
+def is_leap(year):
+    if year % 4 == 0:
+        if year % 100 == 0:
+            if year % 400 == 0:
+                return True
+            else:
+                return False # not leap
+        else:
+            return True # leap
+    else:
+        return False
+
+
+def days_in_month(year,month):
+    month_days = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
+    if is_leap(year) == True:  #year leap
+        month_days[1] = 29
+        month = month_days[month - 1]
+        return month
+    else: # year not leap
+        month = month_days[month - 1]
+        return month
+
+
+# 🚨 Do NOT change any of the code below
+year = int(input("Enter a year: "))
+month = int(input("Enter a month: "))
+days = days_in_month(year, month)
+print(days)
+::Enter a year: 2020
+::Enter a month: 3
+::31
+
+
+
+def add(n1, n2):
+    return n1 + n2
+
+operations = {"+": add}
+function = operations["+"]
+print(function(2,8))
+::10
 
 
 
 
+# calculator
+def add(n1, n2):
+    return n1 + n2
+
+
+def subtract(n1, n2):
+    return n1 - n2
+
+
+def multiply(n1, n2):  #множення
+    return n1 * n2
+
+
+def divide(n1, n2):  #ділення
+    return n1 / n2
+
+
+operations = {"+": add,
+       "-": subtract,
+       "*": multiply,
+       "/": divide}
+
+num1 = int(input("What is first number? "))
+
+for key in operations:
+    print(key)
+
+operation_symbol = input("Print operation symbol: ")
+num2 = int(input("What is second number? "))
+answer = operations[operation_symbol]
+print(f"{num1} {operation_symbol} {num2} = {answer(num1,num2)}")
+
+
+
+# calculator v2
+def add(n1, n2):
+    return n1 + n2
+
+
+def subtract(n1, n2):
+    return n1 - n2
+
+
+def multiply(n1, n2):  #множення
+    return n1 * n2
+
+
+def divide(n1, n2):  #ділення
+    return n1 / n2
+
+
+num1 = int(input("What is first number? "))
+operations = {
+"+": add,
+"-": subtract,
+"*": multiply,
+"/": divide
+}
+
+for key in operations:
+    print(key)
+
+calculat = True
+while calculat:
+
+    operation_symbol = input("Print operation symbol: ")
+    num2 = int(input("What is second number? "))
+    calculation_function = operations[operation_symbol]
+    answer = calculation_function(num1, num2)
+    print(f"{num1} {operation_symbol} {num2} = {answer}")
+
+    new_calculate = input(f"Type 'y' to continue calculating with {answer}, or type 'n' to start a new calculation:")
+    if new_calculate == "y":
+        num1 = answer
+    else:
+        print("bye")
+        calculat = False
+
+
+
+# calculator v3_with_def
+def add(n1, n2):
+    return n1 + n2
+
+
+def subtract(n1, n2):
+    return n1 - n2
+
+
+def multiply(n1, n2):  #множення
+    return n1 * n2
+
+
+def divide(n1, n2):  #ділення
+    return n1 / n2
+
+def cal():
+    operation_symbol = input("Print operation symbol: ")
+    num2 = int(input("What is second number? "))
+    calculation_function = operations[operation_symbol]
+    answer = calculation_function(num1, num2)
+    print(f"{num1} {operation_symbol} {num2} = {answer}")
+    return answer
+
+
+num1 = int(input("What is first number? "))
+operations = {
+"+": add,
+"-": subtract,
+"*": multiply,
+"/": divide
+}
+
+for key in operations:
+    print(key)
+
+calculat = True
+while calculat:
+    answer = cal()
+
+    new_calculate = input(f"Type 'y' to continue calculating with {answer}, or type 'n' to start a new calculation:")
+    num1 = answer
+    if new_calculate == "n":
+        print("bye")
+        calculat = False
 
 
 

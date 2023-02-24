@@ -233,10 +233,46 @@ key2 : value,
 
 
 
+10 day 24.02.23  functions with outputs - функції з виводом
+def my_function():
+    result = 3*2
+    return result
+
+def my_function():
+    return 3*2
+output = my_function()
+
+.title - зробити кожну літеру заголовною
+
+
+def days_in_month(year,month):
+    """ hello documentation here"""         - створення документації підказок
+
+
+def add(n1, n2):                        - повернення відповіді
+    return n1 + n2
+
+operations = {"+": add}                 - використовувати словник як метод функцій
+function = operations["+"]
+print(function(2,8))
+::10
+
+
+If you want to use the return value from a function, then call the function and assign it to such a variable
+def fun():                          - використовувати змінну повернену return
+    x = 5
+    return x
+>>> x = fun()
+>>> x
+5
 
 
 
+def recursion():        - рекурсія
+    do something
+    recursion() - repeat do something
 
+resucrion()
 
 
 

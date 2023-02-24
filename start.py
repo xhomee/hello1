@@ -1,26 +1,52 @@
-from pi_module import logo
-
-print(logo)
-check_dict = []
-
-poll = True
-while poll:
-    your_name = input("What is your name?: ")
-    your_price = int(input("What is your bid?: "))
-
-    def check_biggest(you_name, you_price):
-        add_dict = {"name": you_name, "price": you_price}
-        check_dict.append(add_dict)
+# calculator
+def add(n1, n2):
+    return n1 + n2
 
 
-    check_biggest(you_name=your_name, you_price=your_price)
-    end_poll = input("Are there any other bidders? Type 'yes or 'no'.\n").lower()
-    if end_poll == "n" or end_poll == "no":
-        big = 0
-        name = ""
-        for biggest_value in check_dict:
-            if biggest_value["price"] > big:
-                big = biggest_value["price"]
-                name = biggest_value["name"]
-        print(f"The winner is {name} with a bid of ${big}")
-        poll = False
+def subtract(n1, n2):
+    return n1 - n2
+
+
+def multiply(n1, n2):  #множення
+    return n1 * n2
+
+
+def divide(n1, n2):  #ділення
+    return n1 / n2
+
+# def cal():
+#     operation_symbol = input("Print operation symbol: ")
+#     num2 = int(input("What is next number? "))
+#     calculation_function = operations[operation_symbol]
+#     answer = calculation_function(num1, num2)
+#     print(f"{num1} {operation_symbol} {num2} = {answer}")
+#     return answer
+
+operations = {
+    "+": add,
+    "-": subtract,
+    "*": multiply,
+    "/": divide
+    }
+def recursion():
+    num1 = float(input("What is first number? "))
+
+    for key in operations:
+        print(key)
+
+    calculat = True
+    while calculat:
+        operation_symbol = input("Print operation symbol: ")
+        num2 = float(input("What is next number? "))
+        calculation_function = operations[operation_symbol]
+        answer = calculation_function(num1, num2)
+
+        print(f"{num1} {operation_symbol} {num2} = {answer}")
+
+        if input(f"Type 'y' to continue calculating with {answer}, or type 'n' to start a new calculation: ") == "y":
+            num1 = answer
+        else:
+            calculat = False
+            recursion()
+
+recursion()
