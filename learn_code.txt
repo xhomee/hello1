@@ -2008,3 +2008,106 @@ while game_started:
         game_started = False
 
 
+
+12 day 03.03.23 scope
+
+enemies = 1
+
+def increase_enemies():
+  enemies = 2
+  print(f"enemies inside function: {enemies}")
+
+increase_enemies()
+print(f"enemies outside function: {enemies}")
+::enemies inside function: 2
+enemies outside function: 1
+
+
+
+
+player_health = 10
+
+def game():
+    def drink_potion():
+        potion_strenght = 2
+        print(player_health)
+
+drink_potion()
+print(player_health)
+:NameError: name 'drink_potion' is not defined
+
+
+
+game_level = 3
+enemies = ["skeleton", "zombie", "alien"]
+if game_level < 5 :
+    new_enemies = enemies[0]
+
+print(new_enemies)
+:skeleton
+
+
+game_level = 3
+def create_enemy():
+    enemies = ["skeleton", "zombie", "alien"]
+    if game_level < 5 :
+        new_enemies = enemies[0]
+
+print(new_enemies)
+:name 'new_enemies' is not defined
+
+game_level = 3
+def create_enemy():
+    enemies = ["skeleton", "zombie", "alien"]
+    if game_level < 5 :
+        new_enemies = enemies[0]
+
+    print(new_enemies)
+create_enemy()
+:skeleton
+
+
+
+enemies = "skeleton"
+
+def increase_enemies():
+    global enemies
+    enemies = "zombie"
+    print(f"enemies inside function: {enemies}")
+
+increase_enemies()
+print(f"enemies outside function: {enemies}")
+:enemies inside function: zombie
+enemies outside function: zombie
+
+
+
+enemies = "skeleton"
+
+def increase_enemies():
+    enemies = "zombie"
+    print(f"enemies inside function: {enemies}")
+    return enemies
+
+enemies = increase_enemies()
+print(f"enemies outside function: {enemies}")
+:enemies inside function: zombie
+enemies outside function: zombie
+
+
+
+PI = 3.14
+URL = "https://www.google.com"
+PAMBU = "pambu"
+
+def create():
+    print(PAMBU)
+
+create()
+:pambu
+
+
+
+
+
+

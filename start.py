@@ -1,116 +1,181 @@
 import random
 import pi_module
 
-print(pi_module.logo)
-start_game_one = input("Do you want to play a game of Blackjack? Type 'y' or 'n': \n")
+number = random.randint(1,100)
+#print(f"number is {number}")
 
-deck_cards = [11, 2, 3, 4, 5, 6, 7, 8, 9, 10, 10, 10, 10]
+print(pi_module.pambu_doh)
+print("Welcome to the Number Guessing Game!")
+input_level = input("Choose a difficulty. Type 'easy' or 'hard': ")
+
+def check_level(input_level):
+    global life
+    if input_level == "hard" or input_level == "h":
+        print("You have 5 attempts remaining to guess the number.")
+        life = 5
+    elif input_level == "easy" or input_level == "e":
+        print("You have 10 attempts remaining to guess the number.")
+        life = 10
+    return life
+
+check_level(input_level)
+
+def check_number(user_answer):
+    global life
+    global game
+    if user_answer > 100 or user_answer < 0:
+        print("incorrect answer")
+        life = life -1
+    elif user_answer == number:
+        print(f"You got it! The answer was {number}.")
+        #life = 0
+        game = False
+    elif user_answer > number:
+        print("Too high.")
+        life = life - 1
+        print(f"You have {life} attempts remaining to guess the number.")
+    elif user_answer < number:
+        print("Too low.")
+        life = life - 1
+        print(f"You have {life} attempts remaining to guess the number.")
+    return life
 
 
-def first_hand():
-    player_hand = []
-    dealer_hand = []
-    player_hand.append(random.choice(deck_cards))
-    player_hand.append(random.choice(deck_cards))
 
-    dealer_hand.append(random.choice(deck_cards))
-    dealer_hand.append(random.choice(deck_cards))
-    return player_hand, dealer_hand
+game = True
 
-
-def add_cards_to_hand(chose_role):
-    if chose_role == "player":
-        player_hand.append(random.choice(deck_cards))
+while game:
+    if life == 0 and user_answer != number:
+        print(f"You've run out of guesses, you lose. The answer was {number}.")
+        game = False
     else:
-        dealer_hand.append(random.choice(deck_cards))
+        user_answer = int(input("Make a guess: "))
+        check_number(user_answer)
 
 
-def print_cards(chose_role):
-    if chose_role == "your_cards":
-        print(f"Your cards: {player_hand}, current score: {sum(player_hand)}")
-    else:
-        print(f"Computer's cards: {dealer_hand}, current score: {sum(dealer_hand)}\n")
 
 
-game_started = True
-turn = "player"
-if start_game_one == "y":
-
-    game_started = True
-    first_hand()
-    player_hand, dealer_hand = first_hand()
-    print(f"Your cards: {player_hand}, current score: {sum(player_hand)}")
-    print(f"Computer's first card: {dealer_hand[0]}\n")
-
-else:
-    print("gg, invalid value")
-    game_started = False
 
 
-def sum_cards_in_hand(cards_in_hand):
-    if 11 in cards_in_hand and sum(cards_in_hand) > 21:
-        cards_in_hand.remove(11)
-        cards_in_hand.append(1)
-
-    return cards_in_hand
 
 
-def check_lose(player):
-    global game_started
-    global turn
-    sum_player = sum(sum_cards_in_hand(player))
-
-    if sum_player > 21:
-        print("You lose this game\n")
-        game_started = False
 
 
-def check_win(player, dealer):
-    global game_started
-    sum_player = sum(sum_cards_in_hand(player))
-    sum_dealer = sum(sum_cards_in_hand(dealer))
+#
+# #check_level(input_level=input_level)
+#
+# # life = check_level(input_level=input_level)
+# # print(life)
+#
+# def check_answer():
+#     answer = int(input("введіть число "))
+#     if answer > number:
+#         print(life)
+#         new_life = life - 1
+#         print(new_life)
+#
+#     while new_life > 0:
+#
+#         print("gg")
+#         break
+#
+#     print(f"sdfgsdfg2 {new_life}")
+#
+# check_answer()
+# check_answer()
+# check_answer()
+# check_answer()
+# check_answer()
+# #print(f"sdfgsdfg3 {new_life}")
+# #new_life = check_answer()
+# #print(f"sdfsdfg {new_life}")
+# #
+# # while new_life > 0:
+# #     new_life = check_answer()
+# #     check_answer()
+#
+#
+#
+#
 
-    if sum_player > sum_dealer or sum_dealer > 21:
-        print("you win")
-        game_started = False
-    elif sum_player < sum_dealer or sum_dealer == 21:
-        print("you lose")
-        game_started = False
-    elif sum_player == sum_dealer:
-        print("draw")
-        game_started = False
-    else:
-        print("404 error")
 
 
-while game_started:
-    global new_card
 
-    if turn == "player":
-        y = sum(sum_cards_in_hand(player_hand))
-        if y == 21:
-            turn = "g"
-            continue
-        else:
-            new_card = input("Type 'y' to get another card, type 'n' to pass: \n")
 
-            if new_card == "y":
-                add_cards_to_hand(chose_role="player")
-                sum_cards_in_hand(player_hand)
-                sum_cards_in_hand(dealer_hand)
-                print_cards(chose_role="your_cards")
-                x = sum_cards_in_hand(player_hand)
-                check_lose(player=x)
 
-    elif turn != "player":
-        print_cards(chose_role="dealer_cards")
-        while sum(dealer_hand) < 17:
-            add_cards_to_hand(chose_role="dealer")
-            print_cards(chose_role="dealer_cards")
-        x = sum_cards_in_hand(player_hand)
-        y = sum_cards_in_hand(dealer_hand)
-        check_win(player=x, dealer=y)
 
-    else:
-        print("invalid value")
-        game_started = False
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# answer_level = input("Choose a difficulty. Type 'easy' or 'hard': ")
+# if answer_level == "hard" or answer_level == "h":
+#     lifes = 5
+#     print("You have 5 attempts remaining to guess the number.")
+#     #print("gg")
+# elif answer_level == "easy" or answer_level == "e":
+#     lifes = 10
+#     print("You have 10 attempts remaining to guess the number.")
+#
+#
+#
+# def check_number(user_answer,lifes):
+#
+#     if user_answer > 100 or user_answer < 0:
+#         print("incorrect answer")
+#         lifes = lifes -1
+#         print(f"we there {lifes}")
+#     elif user_answer == number:
+#         print("you win")
+#         lifes = 0
+#         pass
+#     elif user_answer > number:
+#         print("Ваше число більше ніж загадане")
+#         lifes = lifes - 1
+#         print(f"У вас залишилось {lifes} життів")
+#     elif user_answer < number:
+#         print("Ваше число меньше ніж загадане")
+#         lifes = lifes - 1
+#         print(f"У вас залишилось {lifes} життів")
+#     return lifes
+# print(lifes)
+#
+#
+# #print(f"dfgsdfgsdfg {lifes}")
+#
+# while lifes > 0:
+#     #print(new_lifes)
+#     print(lifes)
+#     user_answer = int(input("Make a guess: "))
+#     check_number(user_answer,lifes)
+#     pass
+#
+#
+#
+

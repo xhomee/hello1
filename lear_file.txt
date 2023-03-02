@@ -281,11 +281,27 @@ global - use global for def
 
 
 
+12 day 03.03.23 scope numspace
+global
+
+Якщо ви створюєте змінну в рамках функції, тоді вона доступна тільки в рамках функції
+Але якщо створювати всередині циклу if while for тоді це створення окремого локального діапазону
 
 
+enemies = "skeleton"
 
+def increase_enemies():
+    enemies = "zombie"
+    print(f"enemies inside function: {enemies}")
+    return enemies
 
+enemies = increase_enemies()
+print(f"enemies outside function: {enemies}")
+:enemies inside function: zombie
+enemies outside function: zombie
 
+Використовувати глобальні змінні для визначення констант - лінк, число пі, токен
+Використовувати великі літери
 
 
 
