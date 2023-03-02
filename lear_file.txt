@@ -276,6 +276,10 @@ resucrion()
 
 
 
+11 day 02.03.23
+global
+
+
 
 
 
