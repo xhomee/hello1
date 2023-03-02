@@ -18,17 +18,18 @@ def check_level(input_level):
         life = 10
     return life
 
+
 check_level(input_level)
+
 
 def check_number(user_answer):
     global life
     global game
     if user_answer > 100 or user_answer < 0:
         print("incorrect answer")
-        life = life -1
+        life = life - 1
     elif user_answer == number:
         print(f"You got it! The answer was {number}.")
-        #life = 0
         game = False
     elif user_answer > number:
         print("Too high.")
@@ -41,7 +42,6 @@ def check_number(user_answer):
     return life
 
 
-
 game = True
 
 while game:
@@ -51,14 +51,6 @@ while game:
     else:
         user_answer = int(input("Make a guess: "))
         check_number(user_answer)
-
-
-
-
-
-
-
-
 
 
 #
@@ -178,4 +170,3 @@ while game:
 #
 #
 #
-
