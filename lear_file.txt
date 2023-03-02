@@ -276,7 +276,7 @@ resucrion()
 
 
 
-11 day 02.03.23
+11 day 02.03.23 blackjack
 global - use global for def
 
 
