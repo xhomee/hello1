@@ -79,6 +79,8 @@ def check_win(player, dealer):
     elif sum_player == sum_dealer:
         print("draw")
         game_started = False
+    else:
+        print("404 error")
 
 
 while game_started:
