@@ -1,54 +1,49 @@
-import random
-import pi_module
+############DEBUGGING#####################
 
-number = random.randint(1,100)
-#print(f"number is {number}")
+# Describe Problem
+# def my_function():
+#   for i in range(1, 21):
+#     if i == 20:
+#       print("You got it")
+#
+# my_function()
 
-print(pi_module.pambu_doh)
-print("Welcome to the Number Guessing Game!")
-input_level = input("Choose a difficulty. Type 'easy' or 'hard': ")
+# Reproduce the Bug
+# from random import randint
+# dice_imgs = ["❶", "❷", "❸", "❹", "❺", "❻"]
+# dice_num = randint(0, 5)
+# print(dice_imgs[dice_num])
 
-def check_level(input_level):
-    global life
-    if input_level == "hard" or input_level == "h":
-        print("You have 5 attempts remaining to guess the number.")
-        life = 5
-    elif input_level == "easy" or input_level == "e":
-        print("You have 10 attempts remaining to guess the number.")
-        life = 10
-    return life
+# # Play Computer
+# year = int(input("What's your year of birth?"))
+# if year > 1980 and year <= 1994:
+#   print("You are a millenial.")
+# elif year > 1994:
+#   print("You are a Gen Z.")
 
+# # Fix the Errors
+# age = int(input("How old are you?"))
+# if age > 18:
+#     print(f"You can drive at age {age}.")
 
-check_level(input_level)
+# #Print is Your Friend
+# pages = 0
+# word_per_page = 0
+# pages = int(input("Number of pages: "))
+# word_per_page = int(input("Number of words per page: "))
+# print(f"pages = {pages}")
+# print(f"word_per_page = {word_per_page}")
+# total_words = pages * word_per_page
+# print(total_words)
 
+# #Use a Debugger
+# def mutate(a_list):
+#   b_list = []
+#   for item in a_list:
+#     new_item = item * 2
+#     b_list.append(new_item)
+#   print(b_list)
+#
+# mutate([1,2,3,5,8,13])
 
-def check_number(user_answer):
-    global life
-    global game
-    if user_answer > 100 or user_answer < 0:
-        print("incorrect answer")
-        life = life - 1
-    elif user_answer == number:
-        print(f"You got it! The answer was {number}.")
-        game = False
-    elif user_answer > number:
-        print("Too high.")
-        life = life - 1
-        print(f"You have {life} attempts remaining to guess the number.")
-    elif user_answer < number:
-        print("Too low.")
-        life = life - 1
-        print(f"You have {life} attempts remaining to guess the number.")
-    return life
-
-
-game = True
-
-while game:
-    if life == 0 and user_answer != number:
-        print(f"You've run out of guesses, you lose. The answer was {number}.")
-        game = False
-    else:
-        user_answer = int(input("Make a guess: "))
-        check_number(user_answer)
 
