@@ -1,49 +1,68 @@
-############DEBUGGING#####################
+from game_data import data
+from pi_module import vs, higher_lower
+import random
 
-# Describe Problem
-# def my_function():
-#   for i in range(1, 21):
-#     if i == 20:
-#       print("You got it")
-#
-# my_function()
-
-# Reproduce the Bug
-# from random import randint
-# dice_imgs = ["❶", "❷", "❸", "❹", "❺", "❻"]
-# dice_num = randint(0, 5)
-# print(dice_imgs[dice_num])
-
-# # Play Computer
-# year = int(input("What's your year of birth?"))
-# if year > 1980 and year <= 1994:
-#   print("You are a millenial.")
-# elif year > 1994:
-#   print("You are a Gen Z.")
-
-# # Fix the Errors
-# age = int(input("How old are you?"))
-# if age > 18:
-#     print(f"You can drive at age {age}.")
-
-# #Print is Your Friend
-# pages = 0
-# word_per_page = 0
-# pages = int(input("Number of pages: "))
-# word_per_page = int(input("Number of words per page: "))
-# print(f"pages = {pages}")
-# print(f"word_per_page = {word_per_page}")
-# total_words = pages * word_per_page
-# print(total_words)
-
-# #Use a Debugger
-# def mutate(a_list):
-#   b_list = []
-#   for item in a_list:
-#     new_item = item * 2
-#     b_list.append(new_item)
-#   print(b_list)
-#
-# mutate([1,2,3,5,8,13])
+user_score = 0
+game_on = True
 
 
+def randoms():
+    random_answer = random.choice(data)
+    random_name = random_answer['name']
+    random_count = random_answer['follower_count']
+    random_description = random_answer['description']
+    random_country = random_answer['country']
+    return random_answer, random_name, random_count, random_description, random_country
+
+
+random_answer, random_name, random_count, random_description, random_country = randoms()
+random_answer2, random_name2, random_count2, random_description2, random_country2 = randoms()
+
+
+def check_who_biggest():
+    global user_score
+    if random_count > random_count2:
+        return random_count
+    elif random_count2 > random_count:
+        return random_count2
+    else:
+        user_score += 1
+        return random_count2
+
+
+print(higher_lower)
+a_print =(f'Answer A: {random_name}, a {random_description}, from {random_country} + {random_count}\n'
+          f'{vs}\nAnswer B: {random_name2}, a {random_description2}, from {random_country2} + {random_count2}')
+print(a_print)
+
+
+while game_on:
+    answer = input("\nWho has more followers? Type 'A' or 'B': ")
+    if answer == "a" or answer == "A":
+        if random_count == check_who_biggest():
+            user_score += 1
+            print(f"You score a: {user_score}")
+            random_answer2, random_name2, random_count2, random_description2, random_country2 = randoms()
+            print(f'\nAnswer A: {random_name}, a {random_description}, from {random_country} + {random_count}')
+            print(vs)
+            print(f'Answer B: {random_name2}, a {random_description2}, from {random_country2} + {random_count2}')
+        else:
+            print(f"You lose. you score {user_score}")
+            game_on = False
+    elif answer == "b" or answer == "B":
+        if random_count2 == check_who_biggest():
+            user_score += 1
+            print(f"You score b: {user_score}")
+            random_answer, random_name, random_count, random_description, random_country = randoms()
+            print(f'\nAnswer A: {random_name}, a {random_description}, from {random_country} + {random_count}')
+            print(vs)
+            print(f'Answer B: {random_name2}, a {random_description2}, from {random_country2} + {random_count2}')
+        else:
+            print(f"You lose. you score {user_score}")
+            game_on = False
+    elif answer == "xhome":
+        user_score += 999
+        print(f"You score a: {user_score}")
+    else:
+        print(f"useless. you score {user_score}")
+        game_on = False
