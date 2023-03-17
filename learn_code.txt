@@ -2272,3 +2272,174 @@ game()
 
 
 
+14 day 17.03.23
+
+#my_answer
+from game_data import data
+from pi_module import vs, higher_lower
+import random
+
+user_score = 0
+game_on = True
+
+
+def randoms():
+    random_answer = random.choice(data)
+    random_name = random_answer['name']
+    random_count = random_answer['follower_count']
+    random_description = random_answer['description']
+    random_country = random_answer['country']
+    return random_answer, random_name, random_count, random_description, random_country
+
+
+random_answer, random_name, random_count, random_description, random_country = randoms()
+random_answer2, random_name2, random_count2, random_description2, random_country2 = randoms()
+
+
+def check_who_biggest():
+    global user_score
+    if random_count > random_count2:
+        return random_count
+    elif random_count2 > random_count:
+        return random_count2
+    else:
+        user_score += 1
+        return random_count2
+
+
+print(higher_lower)
+a_print =(f'Answer A: {random_name}, a {random_description}, from {random_country} \n'
+          f'{vs}\nAnswer B: {random_name2}, a {random_description2}, from {random_country2} ')
+print(a_print)
+
+
+while game_on:
+    answer = input("\nWho has more followers? Type 'A' or 'B': ")
+    if answer == "a" or answer == "A":
+        if random_count == check_who_biggest():
+            user_score += 1
+            print(f"\nYou score: {user_score}\n")
+            random_answer2, random_name2, random_count2, random_description2, random_country2 = randoms()
+            print(f'\nAnswer A: {random_name}, a {random_description}, from {random_country}')
+            print(vs)
+            print(f'Answer B: {random_name2}, a {random_description2}, from {random_country2}')
+        else:
+            input(f"You lose. you score {user_score}")
+            game_on = False
+    elif answer == "b" or answer == "B":
+        if random_count2 == check_who_biggest():
+            user_score += 1
+            print(f"\nYou score: {user_score}\n")
+            random_answer, random_name, random_count, random_description, random_country = randoms()
+            print(f'\nAnswer A: {random_name}, a {random_description}, from {random_country}')
+            print(vs)
+            print(f'Answer B: {random_name2}, a {random_description2}, from {random_country2}')
+        else:
+            input(f"You lose. you score {user_score}")
+            game_on = False
+    elif answer == "xhome":
+        user_score += 999
+        print(f"\nYou score: {user_score}\n")
+    else:
+        input(f"You lose. you score {user_score}")
+        game_on = False
+:::
+data = [
+    {
+        'name': 'Instagram',
+        'follower_count': 346,
+        'description': 'Social media platform',
+        'country': 'United States'
+    },
+    {
+        'name': 'Cristiano Ronaldo',
+        'follower_count': 215,
+        'description': 'Footballer',
+        'country': 'Portugal'
+    }]
+
+
+
+#teatcher_answer
+from game_data import data
+import random
+from art import logo, vs
+from replit import clear
+
+def get_random_account():
+  """Get data from random account"""
+  return random.choice(data)
+
+def format_data(account):
+  """Format account into printable format: name, description and country"""
+  name = account["name"]
+  description = account["description"]
+  country = account["country"]
+  # print(f'{name}: {account["follower_count"]}')
+  return f"{name}, a {description}, from {country}"
+
+def check_answer(guess, a_followers, b_followers):
+  """Checks followers against user's guess
+  and returns True if they got it right.
+  Or False if they got it wrong."""
+  if a_followers > b_followers:
+    return guess == "a"
+  else:
+    return guess == "b"
+
+
+def game():
+  print(logo)
+  score = 0
+  game_should_continue = True
+  account_a = get_random_account()
+  account_b = get_random_account()
+
+  while game_should_continue:
+    account_a = account_b
+    account_b = get_random_account()
+
+    while account_a == account_b:
+      account_b = get_random_account()
+
+    print(f"Compare A: {format_data(account_a)}.")
+    print(vs)
+    print(f"Against B: {format_data(account_b)}.")
+
+    guess = input("Who has more followers? Type 'A' or 'B': ").lower()
+    a_follower_count = account_a["follower_count"]
+    b_follower_count = account_b["follower_count"]
+    is_correct = check_answer(guess, a_follower_count, b_follower_count)
+
+    clear()
+    print(logo)
+    if is_correct:
+      score += 1
+      print(f"You're right! Current score: {score}.")
+    else:
+      game_should_continue = False
+      print(f"Sorry, that's wrong. Final score: {score}")
+
+game()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
