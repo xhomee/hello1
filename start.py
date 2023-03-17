@@ -31,8 +31,8 @@ def check_who_biggest():
 
 
 print(higher_lower)
-a_print =(f'Answer A: {random_name}, a {random_description}, from {random_country} + {random_count}\n'
-          f'{vs}\nAnswer B: {random_name2}, a {random_description2}, from {random_country2} + {random_count2}')
+a_print =(f'Answer A: {random_name}, a {random_description}, from {random_country} \n'
+          f'{vs}\nAnswer B: {random_name2}, a {random_description2}, from {random_country2} ')
 print(a_print)
 
 
@@ -41,28 +41,28 @@ while game_on:
     if answer == "a" or answer == "A":
         if random_count == check_who_biggest():
             user_score += 1
-            print(f"You score a: {user_score}")
+            print(f"\nYou score: {user_score}\n")
             random_answer2, random_name2, random_count2, random_description2, random_country2 = randoms()
-            print(f'\nAnswer A: {random_name}, a {random_description}, from {random_country} + {random_count}')
+            print(f'\nAnswer A: {random_name}, a {random_description}, from {random_country}')
             print(vs)
-            print(f'Answer B: {random_name2}, a {random_description2}, from {random_country2} + {random_count2}')
+            print(f'Answer B: {random_name2}, a {random_description2}, from {random_country2}')
         else:
-            print(f"You lose. you score {user_score}")
+            input(f"You lose. you score {user_score}")
             game_on = False
     elif answer == "b" or answer == "B":
         if random_count2 == check_who_biggest():
             user_score += 1
-            print(f"You score b: {user_score}")
+            print(f"\nYou score: {user_score}\n")
             random_answer, random_name, random_count, random_description, random_country = randoms()
-            print(f'\nAnswer A: {random_name}, a {random_description}, from {random_country} + {random_count}')
+            print(f'\nAnswer A: {random_name}, a {random_description}, from {random_country}')
             print(vs)
-            print(f'Answer B: {random_name2}, a {random_description2}, from {random_country2} + {random_count2}')
+            print(f'Answer B: {random_name2}, a {random_description2}, from {random_country2}')
         else:
-            print(f"You lose. you score {user_score}")
+            input(f"You lose. you score {user_score}")
             game_on = False
     elif answer == "xhome":
         user_score += 999
-        print(f"You score a: {user_score}")
+        print(f"\nYou score: {user_score}\n")
     else:
-        print(f"useless. you score {user_score}")
+        input(f"You lose. you score {user_score}")
         game_on = False
